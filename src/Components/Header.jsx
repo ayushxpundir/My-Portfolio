@@ -3,7 +3,7 @@ function Header() {
         <>
             <header>
                 <nav>
-                    <div className="nav-img"><img src="src/assets/profile-pic.png" alt="Profile image" /></div>
+                    <div className="nav-img"><img src="./src/assets/profile-pic.png" alt="Profile image" /></div>
                     <div className="nav-text">
                         <div className="nav-main-text">
                             <h1>Ayush Pundir</h1>
