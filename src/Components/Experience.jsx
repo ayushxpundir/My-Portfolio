@@ -10,7 +10,11 @@ import { BsCss } from "react-icons/bs";
 import { PiFramerLogoFill } from "react-icons/pi";
 import { SiExpress } from "react-icons/si";
 import { BiLogoAdobe } from "react-icons/bi";
-import Projects from "./Projects";
+import { SiGnubash } from "react-icons/si";
+import { SiNpm } from "react-icons/si";
+import { RiVercelFill } from "react-icons/ri";
+import { SiNetlify } from "react-icons/si";
+import { SiPostgresql } from "react-icons/si";
 
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -22,7 +26,7 @@ function Experience() {
             <section>
                 <div className="experience">
                     <div className="s-head">
-                        <h1>EXPERIENCE</h1>
+                        <h1>EXPERIENCES</h1>
                     </div>
                     <div className="exp-work">
                         <div className="timeline-container">
@@ -38,7 +42,7 @@ function Experience() {
                                         <div className="exp-title">
                                             <h3>Frontend Developer · <span className="exp-span es1">Classified</span> </h3>
                                         </div>
-                                        <p className="subtitle">Stealth, Full-Time | Feb 26 - Present</p>
+                                        <p className="subtitle">Stealth, Internship | Feb 26 - Present</p>
                                         {/* <div className="exp-description">
                                             <ol>
                                             </ol>
@@ -90,6 +94,12 @@ function Experience() {
                                         </div>
                                         <div className="icon-box" data-title="Adobe Suite">
                                             <BiLogoAdobe className="exp-sicons" />
+                                        </div>
+                                        <div className="icon-box" data-title="Netlify">
+                                            <SiNetlify className="exp-sicons" />
+                                        </div>
+                                        <div className="icon-box" data-title="RiVercelFill">
+                                            <RiVercelFill className="exp-sicons" />
                                         </div>
                                     </div>
                                 </div>

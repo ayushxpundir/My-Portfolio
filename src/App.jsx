@@ -10,6 +10,7 @@ import Projects from './Components/Projects'
 import Experience from './Components/Experience'
 import Links from './Components/Links'
 import Loader from './Components/Loader'
+import Certifications from './Components/Certifications'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Stack />
       <Experience />
       <Projects />
+      <Certifications />
     </>
   )
 }

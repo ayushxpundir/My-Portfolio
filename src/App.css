@@ -25,6 +25,11 @@ nav {
   width: fit-content;
 }
 
+header {
+  
+  margin-top: 5em;
+}
+
 .nav-img img {
   width: var(--nav-avatar-size);
   border-radius: .7em;
@@ -396,13 +401,25 @@ nav h3 {
 
 .subtitle {
   color: #818181;
+  display: flex;
+  align-items: center;
+  gap: .3em;
+}
+
+.certext {
+  display: block;
+  width: .9em;
 }
 
 .exp-title {
   display: flex;
   align-items: center;
-
   gap: 2em;
+}
+
+.certext {
+  display: inline-block;
+  height: auto;
 }
 
 .exp-span {
@@ -419,7 +436,7 @@ nav h3 {
 .exp-stack {
   display: flex;
   margin-top: .5em;
-  gap: .25em;
+  gap: .4em;
 }
 
 .exp-sicons {
@@ -466,6 +483,7 @@ nav h3 {
     transform: rotate(360deg);
   }
 }
+
 
 /* ===========================================================
    📱 MOBILE RESPONSIVE OVERRIDES
