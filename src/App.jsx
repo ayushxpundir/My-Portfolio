@@ -9,11 +9,13 @@ import About from './Components/About'
 import Projects from './Components/Projects'
 import Experience from './Components/Experience'
 import Links from './Components/Links'
+import Loader from './Components/Loader'
 
 function App() {
 
   return (
     <>
+      <Loader />
       <Header />
       <About />
       <Links />
