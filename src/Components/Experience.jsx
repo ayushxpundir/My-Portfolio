@@ -36,7 +36,7 @@ function Experience() {
                                     </div>
                                     <div className="timeline-content">
                                         <div className="exp-title">
-                                            <h3>Developer · <span className="exp-span es1">Classified</span> </h3>
+                                            <h3>Frontend Developer · <span className="exp-span es1">Classified</span> </h3>
                                         </div>
                                         <p className="subtitle">Stealth, Full-Time | Feb 26 - Present</p>
                                         {/* <div className="exp-description">

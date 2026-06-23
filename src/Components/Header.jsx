@@ -9,7 +9,7 @@ function Header() {
                     <div className="nav-text">
                         <div className="nav-main-text">
                             <h1>Ayush Pundir</h1>
-                            <h2>Developer</h2>
+                            <h2>Full-Stack Developer</h2>
                         </div>
                     </div>
                 </nav>

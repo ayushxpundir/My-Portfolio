@@ -12,6 +12,10 @@ import { SiExpress } from "react-icons/si";
 import { BiLogoAdobe } from "react-icons/bi";
 import { SiGnubash } from "react-icons/si";
 import { SiNpm } from "react-icons/si";
+import { RiVercelFill } from "react-icons/ri";
+import { SiNetlify } from "react-icons/si";
+import { SiPostgresql } from "react-icons/si";
+
 
 
 
@@ -84,18 +88,17 @@ function Stack() {
                         <div className="icon-box" data-title="Node">
                             <FaNodeJs className="stack-icon" />
                         </div>
-                        <div className="icon-box" data-title="Bash">
-                            <SiGnubash className="stack-icon" />
+                        <div className="icon-box" data-title="PostgreSQL">
+                            <SiPostgresql className="stack-icon" />
                         </div>
                         <div className="icon-box" data-title="MySQL">
                             <GrMysql className="stack-icon" />
                         </div>
-                        <div className="icon-box" data-title="Zed">
-                            <SiZedindustries className="stack-icon" />
-                        </div>
-
                         <div className="icon-box" data-title="npm">
                             <SiNpm className="stack-icon" />
+                        </div>
+                        <div className="icon-box" data-title="Bash">
+                            <SiGnubash className="stack-icon" />
                         </div>
                         {/* Custom Cursor AI Icon Container */}
                         <div className="icon-box" data-title="Cursor AI">
@@ -115,6 +118,13 @@ function Stack() {
                         <div className="icon-box" data-title="Figma">
                             <IoLogoFigma className="stack-icon" />
                         </div>
+                        <div className="icon-box" data-title="Vercel">
+                            <RiVercelFill className="stack-icon" />
+                        </div>
+                        <div className="icon-box" data-title="Netlify">
+                            <SiNetlify className="stack-icon" />
+                        </div>
+
                     </div>
                 </div>
             </section>

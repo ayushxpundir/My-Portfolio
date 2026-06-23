@@ -20,8 +20,8 @@ function App() {
       <About />
       <Links />
       <Stack />
-      <Projects />
       <Experience />
+      <Projects />
     </>
   )
 }
