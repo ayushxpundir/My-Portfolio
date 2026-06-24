@@ -733,3 +733,24 @@ nav h3 {
 
 }
 
+/* This is an absolute overlay that matches your site's background color */
+.reveal-curtain {
+  position: fixed;
+  inset: 0;
+  background-color: #0b0b0b; /* CHANGE THIS to match your portfolio's exact background color */
+  z-index: 9999;             /* Sits above absolutely everything */
+  pointer-events: none;      /* Ensures it doesn't block user clicks while fading */
+  
+  /* Forces a hardware keyframe animation that runs for 1.2 seconds */
+  animation: fadeOutCurtain .5s ease-in-out forwards;
+}
+
+@keyframes fadeOutCurtain {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none; /* Entirely deletes the curtain layout block at the end */
+  }
+}
