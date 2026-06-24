@@ -16,7 +16,9 @@ import GitHub from './Components/GitHub'
 import Footerwork from './Components/Footerwork'
 import Topheader from './Components/Topheader'
 import Connect from './Components/Connect'
-// Reset position BEFORE the browser draws the frame
+import BlurCard from './Components/BlurCard'
+import Education from './Components/Education'
+
 function InstantStartAtTop() {
   const { pathname } = useLocation();
 
@@ -47,6 +49,7 @@ function Home() {
       <Experience />
       <Projects />
       <Certifications />
+      <Education />
       <Connect />
     </>
   );
@@ -73,6 +76,7 @@ function App() {
 
         {/* Footer visible on all pages */}
         <Footerwork />
+      <BlurCard />
       </BrowserRouter>
     </>
   );

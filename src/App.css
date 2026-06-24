@@ -5,10 +5,10 @@
   --bg-primary: #0f0f0f;
   --bg-tooltip: #161617;
   --bg-loader: #0d0d0d;
-  
+
   --text-primary: rgb(233, 232, 232);
-  --text-muted: rgb(141, 141, 141);
-  --text-lowlight: rgb(107, 107, 107);
+  --text-muted: rgb(143, 137, 137);
+  --text-lowlight: rgb(121, 119, 119);
   --text-timeline-sub: #818181;
   --border-color: rgb(119, 119, 119);
   --hr-color: #7a7a7a;
@@ -18,12 +18,13 @@
   --accent-green-alpha: rgba(0, 221, 153, 0.2);
   --accent-hover-white: #ffffff;
   --accent-icon-default: #e0e0e0;
-  --accent-icon-muted: rgb(109, 109, 109);
-  --accent-link-style: rgb(189, 189, 189);
+  --accent-icon-muted: rgb(160, 160, 160);
+  --accent-link-style: rgb(230, 230, 230);
 
   /* Global Spacing Scale */
   --spacing-md: 0.6em;
-  --spacing-sm: 0.4em; /* Stabilized missing variable */
+  --spacing-sm: 0em;
+  /* Stabilized missing variable */
 
   /* Global Font Sizes */
   --font-size-sm: 1.15em;
@@ -58,7 +59,8 @@ nav {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
-  width: 100%; /* Dynamic fallback calculation for container safety */
+  width: 100%;
+  /* Dynamic fallback calculation for container safety */
   max-width: fit-content;
 }
 
@@ -80,7 +82,8 @@ nav h1 {
   font-size: var(--font-size-lg);
   color: var(--text-primary);
   font-weight: 600;
-  line-height: 1.1; /* Adjusted fractionally to prevent clipping descenders */
+  line-height: 1.1;
+  /* Adjusted fractionally to prevent clipping descenders */
 }
 
 nav h2 {
@@ -457,6 +460,7 @@ nav h3 {
   flex-direction: column;
   gap: 1.5em;
   width: 100%;
+  margin-bottom: 5.5em;
 }
 
 .last-time {
@@ -503,6 +507,7 @@ nav h3 {
 
 .connect p {
   color: rgb(214, 214, 214);
+
 }
 
 .connect div {
@@ -550,7 +555,7 @@ nav h3 {
     --font-size-sm: 0.95em;
     --font-size-md: 0.85em;
     --font-size-lg: 1.5em;
-    --nav-avatar-size: 3em;
+    --nav-avatar-size: 3.5em;
     --spacing-md: 0.5em;
   }
 
@@ -617,7 +622,7 @@ nav h3 {
 
   /* Fixed mobile layout behavior for responsive typography flow */
   .exp-title {
-    gap: 0.4em 1em; 
+    gap: 0.4em 1em;
     flex-wrap: wrap;
     align-items: flex-start;
   }
@@ -651,7 +656,7 @@ nav h3 {
 @media (max-width: 420px) {
   :root {
     --font-size-lg: 1.3em;
-    --nav-avatar-size: 2.8em;
+    --nav-avatar-size: 3em;
   }
 
   .top-header ul {
@@ -673,6 +678,10 @@ nav h3 {
 
   .project-card h3 {
     font-size: 1em;
+  }
+
+  .connect p {
+    font-size: .8em;
   }
 }
 
@@ -720,4 +729,24 @@ nav h3 {
     margin-left: -28px;
     margin-right: 0px !important;
   }
+
+
+}
+
+.card-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4em;
+  background-color: rgba(245, 222, 179, 0);
+  /* Standard mask for modern browsers */
+  mask-image: linear-gradient(to bottom, transparent 0%, black 50px);
+
+  /* Safari support */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 50px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 999;
+  pointer-events: none;
 }
