@@ -9,7 +9,10 @@ function About() {
                 </div>
                 <div className="ab-info">
                     <ol>
-                        <li>I build full-fledged web systems, combining modern engineering tools with advanced design techniques to deliver stunning user interfaces.</li>
+                        <li>
+                            I build full-fledged web systems, combining modern engineering tools with 
+                            advanced design techniques to deliver stunning user interfaces.
+                            </li>
                     </ol>
                 </div>
             </div>

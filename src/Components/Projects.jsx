@@ -1,62 +1,73 @@
-import ProjectCard from "./ProjectCard"
+import React from "react";
+import { LuGlobe } from "react-icons/lu";
+import { FiGithub } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa6";
-import { BsJavascript, BsTypescript } from "react-icons/bs";
-import { FaReact, FaPython, FaGithub, FaNodeJs } from "react-icons/fa";
-import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
-import { SiMongodb, SiZedindustries, SiFramer } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa6";
-import { GrMysql } from "react-icons/gr";
-import { VscVscode } from "react-icons/vsc";
-import { IoLogoFigma } from "react-icons/io5";
-import { BsCss } from "react-icons/bs";
-import roxo from "../assets/roxo.webp";
-import pera from "../assets/pera.webp";
+import { Link } from "react-router-dom";
+import projectsData from "../Data/projectsData.jsx";
+
+function ProjectCard({ image, url_live, url_github, head, description, technologies = [] }) {
+  return (
+    <div className="project-card">
+      <div className="project-image-wrapper">
+        <img src={image} alt={head} className="project-img" />
+      </div>
+      <div className="pro-det">
+        <h3 className="project-head">{head}</h3>
+        <p className="project-desc">{description}</p>
+        <div className="project-links">
+          <div className="pro-links">
+            <a href={url_live} target="_blank" rel="noreferrer" className="project-btn icon-box" data-title="Visit Website">
+              <LuGlobe className="pro-down-ico" />
+            </a>
+            <a href={url_github} target="_blank" rel="noreferrer" className="project-btn icon-box" data-title="View on GitHub">
+              <FiGithub className="pro-down-ico" />
+            </a>
+          </div>
+          <div className="tech-icons" style={{ display: "flex", gap: ".5em" }}>
+            {technologies.map((tech, index) => (
+              <span key={index} className="icon-box" data-title={tech.name}>
+                {React.cloneElement(tech.icon, { className: "tech-istyle" })}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function Projects() {
     return (
-        <>
-            <section>
-                <div className="Projects">
-                    <div className="s-head">
-                        <h1>PROJECTS</h1>
-                    </div>
-                    <div className="projects-info">
-                        {/* 1st Project */}
+        <section>
+            <div className="Projects">
+                <div className="s-head"><h1>PROJECTS</h1></div>
+                <div className="projects-info">
+                    {projectsData.slice(0, 2).map((project) => (
                         <ProjectCard
-                            head="Roxo"
-                            image={roxo}
-                            url_live="https://roxo-ascii-player.vercel.app/"
-                            url_github="https://github.com/ayushxpundir/ROXO"
-                            description="A high-performance, browser-based digital scanning application that translates live video feeds into structural ASCII character arrays in real-time."
-                            technologies={[
-                                { icon: <BsJavascript />, name: "JavaScript" },
-                                { icon: <BsCss />, name: "CSS" }
-                            ]}
+                            key={project.id}
+                            head={project.head}
+                            image={project.image}
+                            url_live={project.url_live}
+                            url_github={project.url_github}
+                            description={project.description}
+                            technologies={project.technologies}
                         />
-                        {/* 2nd Project */}
-                        <ProjectCard
-                            head="Pera"
-                            image={pera}
-                            url_live="https://pera-bookmark-manager.vercel.app/"
-                            url_github="https://github.com/ayushxpundir/Pera"
-                            description="A clean, fast, and personal bookmark manager to organize everything you save on the web. No accounts, no clutter, no distractions."
-                            technologies={[
-                                { icon: <BsJavascript />, name: "JavaScript" },
-                                { icon: <BsCss />, name: "CSS" }
-                            ]}
-                        />
-                    </div>
-                    <div className="See-more">
-                        <div className="box-see-more">
-                            <h1>
-                                Show all projects
-                            </h1>
-                            <FaArrowRight className="arrow-right" />
-                        </div>
-                    </div>
+                    ))}
                 </div>
-            </section>
-        </>
-    )
+                <Link
+                    to="/projects"
+                    className="See-more"
+                    onClick={() => sessionStorage.setItem("homeScrollY", window.scrollY)}
+                >
+                    <div className="box-see-more">
+                        <h1>Show all projects</h1>
+                        <FaArrowRight className="arrow-right" />
+                    </div>
+                </Link>
+            </div>
+        </section>
+    );
 }
-export default Projects
+
+export { ProjectCard };
+export default Projects;
