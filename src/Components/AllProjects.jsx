@@ -7,13 +7,15 @@ function AllProjects() {
     return (
         <section>
             <div className="Projects">
+                <div className="top-back">
+                    <Link to="/" className="See-more all-more">
+                        <div className="box-see-more">
+                            <FaArrowLeft className="arrow-right" />
+                            <h1>Back to home</h1>
+                        </div>
+                    </Link>
+                </div>
                 <div className="s-head"><h1>ALL PROJECTS</h1></div>
-                <Link to="/" className="See-more all-more">
-                    <div className="box-see-more">
-                        <FaArrowLeft className="arrow-right" />
-                        <h1>Back to home</h1>
-                    </div>
-                </Link>
                 <div className="projects-info">
                     {projectsData.map((project) => (
                         <ProjectCard

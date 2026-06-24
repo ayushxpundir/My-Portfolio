@@ -294,22 +294,25 @@ nav h3 {
   width: fit-content;
 }
 
+.top-back{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
 .box-see-more {
   display: flex;
   justify-content: center;
   align-items: center;
   width: fit-content;
   height: fit-content;
-  padding: .5em .7em;
   gap: .5em;
   border-radius: .5em;
-  background-color: var(--pro-grid-bg-color);
-  border: 1px solid var(--pro-grid-border-color);
 }
 
 
 .See-more h1 {
-  font-size: .9em;
+  font-size: 1em;
   font-weight: 300;
   border-radius: .5em;
   color: rgb(209, 209, 209);

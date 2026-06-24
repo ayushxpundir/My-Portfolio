@@ -6,16 +6,18 @@ import { ExperienceItem } from "./Experience.jsx";
 function AllExperience() {
     return (
         <section>
-            <div className="experience">
-                <div className="s-head">
-                    <h1>ALL EXPERIENCES</h1>
-                </div>
-                <Link to="/" className="See-more">
+            <div className="top-back">
+                <Link to="/" className="See-more all-more">
                     <div className="box-see-more">
                         <FaArrowLeft className="arrow-right" />
                         <h1>Back to home</h1>
                     </div>
                 </Link>
+            </div>
+            <div className="experience">
+                <div className="s-head">
+                    <h1>ALL EXPERIENCES</h1>
+                </div>
                 <div className="exp-work">
                     <div className="timeline-container">
                         {experiences.map((exp) => (
