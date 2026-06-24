@@ -16,7 +16,6 @@ import GitHub from './Components/GitHub'
 import Footerwork from './Components/Footerwork'
 import Topheader from './Components/Topheader'
 import Connect from './Components/Connect'
-import BlurCard from './Components/BlurCard'
 import Education from './Components/Education'
 
 function InstantStartAtTop() {
@@ -76,7 +75,6 @@ function App() {
 
         {/* Footer visible on all pages */}
         <Footerwork />
-      <BlurCard />
       </BrowserRouter>
     </>
   );

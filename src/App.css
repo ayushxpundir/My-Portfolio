@@ -733,20 +733,3 @@ nav h3 {
 
 }
 
-.card-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 4em;
-  background-color: rgba(245, 222, 179, 0);
-  /* Standard mask for modern browsers */
-  mask-image: linear-gradient(to bottom, transparent 0%, black 50px);
-
-  /* Safari support */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 50px);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 999;
-  pointer-events: none;
-}
