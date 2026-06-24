@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import stackItems from "../Data/stackData.jsx";
+import stackItems from "../Data/stackData";
 
 function CursorIcon(props) {
     return (
