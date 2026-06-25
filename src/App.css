@@ -763,3 +763,28 @@ nav h3 {
     /* Entirely deletes the curtain layout block at the end */
   }
 }
+
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Active visible state: snapped to original position and fully opaque */
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Clean fade-in utility for initial site entrance */
+.first-load-fade {
+  animation: pureFadeIn 0.6s ease-out forwards;
+}
+
+@keyframes pureFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

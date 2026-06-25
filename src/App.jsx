@@ -17,7 +17,7 @@ import Topheader from './Components/Topheader'
 import Connect from './Components/Connect'
 import Education from './Components/Education'
 
-// Self-contained Loader component to guarantee no reference errors
+// Self-contained Loader component
 function Loader() {
   return (
     <div className="loader-screen">
@@ -26,6 +26,7 @@ function Loader() {
   );
 }
 
+// Resets scroll position instantly to top on route change
 function InstantStartAtTop() {
   const { pathname } = useLocation();
 
@@ -36,10 +37,45 @@ function InstantStartAtTop() {
   return null;
 }
 
+/* ===========================================================
+   🔄 GLOBAL SCROLL OBSERVER WATCHER (GLITCH-FREE)
+   =========================================================== */
+function ScrollRevealWatcher({ showLoader }) {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (showLoader) return;
+
+    const hiddenElements = document.querySelectorAll('.reveal-on-scroll');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.05
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, [pathname, showLoader]);
+
+  return null;
+}
+
 function Home() {
   useEffect(() => {
     const savedY = sessionStorage.getItem("homeScrollY");
-
     if (savedY !== null) {
       window.scrollTo(0, parseInt(savedY, 10));
       sessionStorage.removeItem("homeScrollY");
@@ -48,16 +84,16 @@ function Home() {
 
   return (
     <>
-      <Header />
-      <About />
-      <Links />
-      <GitHub />
-      <Stack />
-      <Experience />
-      <Projects />
-      <Certifications />
-      <Education />
-      <Connect />
+      <div className="reveal-on-scroll"><Header /></div>
+      <div className="reveal-on-scroll"><About /></div>
+      <div className="reveal-on-scroll"><Links /></div>
+      <div className="reveal-on-scroll"><GitHub /></div>
+      <div className="reveal-on-scroll"><Stack /></div>
+      <div className="reveal-on-scroll"><Experience /></div>
+      <div className="reveal-on-scroll"><Projects /></div>
+      <div className="reveal-on-scroll"><Certifications /></div>
+      <div className="reveal-on-scroll"><Education /></div>
+      <div className="reveal-on-scroll"><Connect /></div>
     </>
   );
 }
@@ -84,25 +120,34 @@ function App() {
     <>
       {showLoader && <Loader />}
 
-      {!showLoader && <div className="reveal-curtain" />}
-
       <BrowserRouter>
         <InstantStartAtTop />
+        <ScrollRevealWatcher showLoader={showLoader} />
 
-        {/* Visible on all pages */}
-        <Topheader />
+        {/* Global Nav Bar - Fades in softly on initial app entry only */}
+        <div className={!showLoader ? "first-load-fade" : ""} style={{ opacity: showLoader ? 0 : 1 }}>
+          <Topheader />
+        </div>
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<AllProjects />} />
-          <Route path="/experience" element={<AllExperience />} />
-          <Route path="/certifications" element={<AllCertifications />} />
+          <Route path="/projects" element={<div key="projects-page" className="reveal-on-scroll"><AllProjects /></div>} />
+          <Route path="/experience" element={<div key="experience-page" className="reveal-on-scroll"><AllExperience /></div>} />
+          <Route path="/certifications" element={<div key="certs-page" className="reveal-on-scroll"><AllCertifications /></div>} />
         </Routes>
 
-        {/* Footer visible on all pages */}
-        <Footerwork />
+        <ContextAwareFooter />
       </BrowserRouter>
     </>
+  );
+}
+
+function ContextAwareFooter() {
+  const { pathname } = useLocation();
+  return (
+    <div key={pathname} className="reveal-on-scroll">
+      <Footerwork />
+    </div>
   );
 }
 
