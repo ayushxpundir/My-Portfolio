@@ -14,10 +14,10 @@ const CursorIcon = (props) => (
 const experiences = [
     {
         id: 1,
-        title: "Frontend Developer",
+        title: "Developer",
         company: "Classified",
         companyClass: "exp-span es1",
-        subtitle: "Stealth, Internship | Mar 26 - Present",
+        subtitle: "Stealth, Full-Time | Mar 26 - Present",
         active: true,
         description: [],
         stack: [],
