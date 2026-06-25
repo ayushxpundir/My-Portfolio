@@ -16,9 +16,9 @@
   /* Accent Highlight Colors */
   --accent-green: #00dd99;
   --accent-green-alpha: rgba(0, 221, 153, 0.2);
-  --accent-hover-white: #ffffff;
+  --accent-hover-white: #ebebeb;
   --accent-icon-default: #e0e0e0;
-  --accent-icon-muted: rgb(160, 160, 160);
+  --accent-icon-muted: rgb(230, 206, 206);
   --accent-link-style: rgb(230, 230, 230);
 
   /* Global Spacing Scale */
@@ -188,9 +188,9 @@ nav h3 {
 }
 
 .ab-info {
-  color: rgb(170, 170, 170);
+  color: rgb(202, 202, 202);
   list-style: none;
-  font-weight: 500;
+  font-weight: 450;
   font-size: 1.177em;
 }
 
@@ -460,7 +460,6 @@ nav h3 {
   flex-direction: column;
   gap: 1.5em;
   width: 100%;
-  margin-bottom: 5.5em;
 }
 
 .last-time {

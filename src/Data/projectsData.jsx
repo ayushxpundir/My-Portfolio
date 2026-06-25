@@ -1,6 +1,7 @@
 import { BsJavascript, BsCss } from "react-icons/bs";
 import roxo from "../assets/roxo.webp";
 import pera from "../assets/pera.webp";
+import paso from "../assets/paso.webp";
 
 const projectsData = [
     {
@@ -17,6 +18,18 @@ const projectsData = [
     },
     {
         id: 2,
+        head: "Paso",
+        image: paso,
+        url_live: "https://paso-password-generator.vercel.app/",
+        url_github: "https://github.com/ayushxpundir/Paso",
+        description: "Paso is a ultra-sleek, privacy-first web utility designed to generate mathematically randomized, brute-force resilient passwords instantly.",
+        technologies: [
+            { icon: <BsJavascript />, name: "JavaScript" },
+            { icon: <BsCss />, name: "CSS" },
+        ],
+    },
+    {
+        id: 3,
         head: "Pera",
         image: pera,
         url_live: "https://pera-bookmark-manager.vercel.app/",
