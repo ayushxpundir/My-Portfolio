@@ -17,7 +17,7 @@ const experiences = [
         title: "Frontend Developer",
         company: "Classified",
         companyClass: "exp-span es1",
-        subtitle: "Stealth, Internship | Feb 26 - Present",
+        subtitle: "Stealth, Internship | Mar 26 - Present",
         active: true,
         description: [],
         stack: [],
