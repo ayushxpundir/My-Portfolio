@@ -15,7 +15,7 @@ function AllExperience() {
             <div className="top-back">
                 <Link to="/" className="See-more all-more">
                     <div className="box-see-more">
-                        <FaArrowLeft className="arrow-right" />
+                        <FaArrowLeft className="arrow-left" />
                         <h1>Back to home</h1>
                     </div>
                 </Link>

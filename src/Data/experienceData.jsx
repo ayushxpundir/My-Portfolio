@@ -1,10 +1,19 @@
+import { BsTypescript } from "react-icons/bs";
+import { FaPython, FaGithub, FaNodeJs } from "react-icons/fa";
+import { RiTailwindCssFill, RiVercelFill } from "react-icons/ri";
+import { SiMongodb, SiExpress, SiGnubash, SiNpm, SiNetlify } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa6";
+import { GrMysql } from "react-icons/gr";
 import { IoLogoFigma } from "react-icons/io5";
-import { FaPython } from "react-icons/fa";
-import { PiFramerLogoFill } from "react-icons/pi";
-import { SiNetlify } from "react-icons/si";
-import { RiVercelFill } from "react-icons/ri";
+import PostgresqlIcon from '@iconify-react/simple-icons/postgresql';
 import BaselineAdobeIcon from '@iconify-react/ic/baseline-adobe';
-import CursorAiIcon from '@iconify-react/bxl/cursor-ai';
+import FramerSolidIcon from '@iconify-react/teenyicons/framer-solid';
+import ReactFillIcon from '@iconify-react/akar-icons/react-fill';
+import NextjsIcon from '@iconify-react/devicon-plain/nextjs';
+import VscodeIcon from '@iconify-react/codicon/vscode';
+import CursorIcon from '@iconify-react/simple-icons/cursor';
+import AdobeSolidIcon from '@iconify-react/streamline/adobe-solid';
+import PythonFillIcon from '@iconify-react/akar-icons/python-fill';
 
 const experiences = [
     {
@@ -29,12 +38,12 @@ const experiences = [
             "",
         ],
         stack: [
-            { title: "Figma", icon: IoLogoFigma },
-            { title: "Cursor AI", icon: CursorAiIcon },
-            { title: "Python", icon: FaPython },
-            { title: "Framer", icon: PiFramerLogoFill },
-            { title: "Adobe Suite", icon: BaselineAdobeIcon },
+            { title: "Cursor AI", icon: CursorIcon },
+            { title: "Python", icon: PythonFillIcon },
+            { title: "Framer", icon: FramerSolidIcon },
+            { title: "Adobe Suite", icon: AdobeSolidIcon },
             { title: "Netlify", icon: SiNetlify },
+            { title: "Figma", icon: IoLogoFigma },
             { title: "Vercel", icon: RiVercelFill },
         ],
     },

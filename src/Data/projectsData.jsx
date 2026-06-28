@@ -13,7 +13,6 @@ const projectsData = [
         description: "A high-performance, browser-based digital scanning application that translates live video feeds into structural ASCII character arrays in real-time.",
         technologies: [
             { icon: <BsJavascript />, name: "JavaScript" },
-            { icon: <BsCss />, name: "CSS" },
         ],
     },
     {
@@ -25,7 +24,6 @@ const projectsData = [
         description: "Paso is a ultra-sleek, privacy-first web utility designed to generate mathematically randomized, brute-force resilient passwords instantly.",
         technologies: [
             { icon: <BsJavascript />, name: "JavaScript" },
-            { icon: <BsCss />, name: "CSS" },
         ],
     },
     {
@@ -37,7 +35,6 @@ const projectsData = [
         description: "A clean, fast, and personal bookmark manager to organize everything you save on the web. No accounts, no clutter, no distractions.",
         technologies: [
             { icon: <BsJavascript />, name: "JavaScript" },
-            { icon: <BsCss />, name: "CSS" },
         ],
     },
     // 👉 Add new projects here as objects, following the same format
