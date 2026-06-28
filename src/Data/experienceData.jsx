@@ -14,6 +14,8 @@ import VscodeIcon from '@iconify-react/codicon/vscode';
 import CursorIcon from '@iconify-react/simple-icons/cursor';
 import AdobeSolidIcon from '@iconify-react/streamline/adobe-solid';
 import PythonFillIcon from '@iconify-react/akar-icons/python-fill';
+import PhotoshopIcon from '@iconify-react/devicon-plain/photoshop';
+
 
 const experiences = [
     {
@@ -41,7 +43,7 @@ const experiences = [
             { title: "Cursor AI", icon: CursorIcon },
             { title: "Python", icon: PythonFillIcon },
             { title: "Framer", icon: FramerSolidIcon },
-            { title: "Adobe Suite", icon: AdobeSolidIcon },
+            { title: "Photoshop", icon: PhotoshopIcon },
             { title: "Netlify", icon: SiNetlify },
             { title: "Figma", icon: IoLogoFigma },
             { title: "Vercel", icon: RiVercelFill },
