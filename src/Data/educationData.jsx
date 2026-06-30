@@ -1,4 +1,3 @@
-import { SiGooglecolab, SiPython } from "react-icons/si"; // Example icons if you want them, or remove
 
 const educations = [
   {
