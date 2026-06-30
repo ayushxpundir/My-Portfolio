@@ -1,56 +1,74 @@
 :root {
     /* ===========================================================
-       🎨 THEME COLORS & VARIABLES ONLY
+       🎨 THEME COLORS & VARIABLES
        =========================================================== */
-    --bg-primary: #0f0f0f;
-    --bg-tooltip: #161617;
-    --bg-loader: #0d0d0d;
-    --bg-curtain: #0b0b0b;
+    --bg-primary: #0a0a0b;
+    --bg-tooltip: #1a1a1c;
+    --bg-loader: #0a0a0b;
+    --bg-curtain: #08080a;
 
-    --text-primary: rgb(233, 232, 232);
-    --text-muted: rgb(143, 137, 137);
-    --text-lowlight: rgb(121, 119, 119);
-    --text-timeline-sub: #818181;
-    --border-color: rgb(119, 119, 119);
-    --hr-color: #7a7a7a;
+    --text-primary: rgb(238, 238, 238);
+    --text-muted: rgb(150, 145, 145);
+    --text-lowlight: rgb(128, 126, 126);
+    --text-timeline-sub: #8a8a8a;
+    --border-color: rgb(130, 130, 130);
+    --hr-color: #6e6e6e;
 
     /* Centralized Palette */
     --text-white: #ffffff;
-    --text-card-heading: rgb(228, 228, 228);
-    --text-card-para: rgb(153, 153, 153);
-    --text-timeline-heading: rgb(243, 243, 243);
-    --text-exp-span: rgb(223, 223, 223);
-    --text-exp-desc: rgb(185, 181, 181);
-    --text-connect-para: rgb(214, 214, 214);
-    --text-see-more: rgb(209, 209, 209);
-    --card-hover-border: rgba(255, 255, 255, 0.3);
-    --card-hover-shadow: rgba(0, 0, 0, 0.5);
-    --connect-hover-border: rgba(255, 255, 255, 0.3);
-    --connect-hover-shadow: rgba(0, 0, 0, 0.4);
+    --text-card-heading: rgb(234, 234, 234);
+    --text-card-para: rgb(163, 163, 163);
+    --text-timeline-heading: rgb(247, 247, 247);
+    --text-exp-span: rgb(228, 228, 228);
+    --text-exp-desc: rgb(190, 186, 186);
+    --text-connect-para: rgb(218, 218, 218);
+    --text-see-more: rgb(213, 213, 213);
+    --card-hover-border: rgba(0, 221, 153, 0.35);
+    --card-hover-shadow: rgba(0, 0, 0, 0.55);
+    --connect-hover-border: rgba(0, 221, 153, 0.3);
+    --connect-hover-shadow: rgba(0, 0, 0, 0.45);
     --spinner-border-bg: #2a2a2a;
 
     /* Accent Highlight Colors */
     --accent-green: #00dd99;
-    --accent-green-alpha: rgba(0, 221, 153, 0.2);
-    --accent-hover-white: #ebebeb;
-    --accent-icon-default: #e0e0e0;
-    --accent-icon-muted: rgb(230, 206, 206);
-    --accent-link-style: rgb(230, 230, 230);
+    --accent-green-soft: #2ee6a8;
+    --accent-green-alpha: rgba(0, 221, 153, 0.22);
+    --accent-hover-white: #f2f2f2;
+    --accent-icon-default: #e4e4e4;
+    --accent-icon-muted: rgb(220, 210, 210);
+    --accent-link-style: rgb(235, 235, 235);
 
-    --pro-grid-border-color: rgb(31, 31, 31);
-    --pro-grid-bg-color: #0f0f0f;
-    --timeline-line-color: #2b2b2b;
-    --timeline-dot-muted: #7c7c7c;
+    --pro-grid-border-color: rgb(36, 36, 36);
+    --pro-grid-bg-color: #111113;
+    --pro-grid-bg-gradient: linear-gradient(155deg, #131315 0%, #0d0d0f 100%);
+    --timeline-line-color: #2e2e2e;
+    --timeline-dot-muted: #8a8a8a;
 
-    --proj-ico: rgb(206, 206, 206);
-    --top-header-text-color: rgb(209, 209, 209);
+    --proj-ico: rgb(210, 210, 210);
+    --top-header-text-color: rgb(214, 214, 214);
+
+    /* Spacing & motion tokens */
+    --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    --radius-sm: 0.5em;
+    --radius-md: 0.9em;
+    --radius-lg: 1.1em;
 }
+
+* {
+    scrollbar-color: var(--hr-color) transparent;
+}
+
+::selection {
+    background: var(--accent-green-alpha);
+    color: var(--text-white);
+}
+
 
 /* ===========================================================
    🎬 ANIMATIONS & KEYFRAMES
    =========================================================== */
 .fade-in-element {
-    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: fadeInUp 0.7s var(--ease-smooth) both;
     transform: translateZ(0);
     backface-visibility: hidden;
 }
@@ -58,7 +76,7 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(15px) translateZ(0);
+        transform: translateY(18px) translateZ(0);
     }
     to {
         opacity: 1;
@@ -78,7 +96,7 @@
             var(--accent-green-alpha, rgba(0, 240, 150, 0.3));
     }
     100% {
-        box-shadow: 0 0 14px 4px
+        box-shadow: 0 0 16px 5px
             var(--accent-green-alpha, rgba(0, 240, 150, 0.6));
     }
 }
@@ -102,7 +120,14 @@
     }
 }
 
-
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
 
 /* ===========================================================
    🏗️ CORE STRUCTURE
@@ -116,7 +141,7 @@
 nav {
     display: flex;
     align-items: center;
-    gap: 0.6em;
+    gap: 0.75em;
     width: 100%;
     max-width: fit-content;
 }
@@ -125,37 +150,44 @@ nav {
     width: 3.8em;
     height: 3.8em;
     object-fit: cover;
-    border-radius: 0.7em;
+    border-radius: 0.9em;
     will-change: transform;
     backface-visibility: hidden;
     transform: translateZ(0);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
     transition:
-        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-        border-color 0.3s ease;
+        transform 0.45s var(--ease-smooth),
+        border-color 0.3s ease,
+        box-shadow 0.4s ease;
 }
 
 .nav-img:hover img {
-    transform: scale(1.04) rotate(1.5deg) perspective(1px) translateZ(0);
-    border-color: var(--text-primary);
+    transform: scale(1.05) rotate(1.5deg) perspective(1px) translateZ(0);
+    border-color: var(--accent-green);
+    box-shadow: 0 8px 26px rgba(0, 221, 153, 0.2);
 }
 
 .nav-main-text {
     display: flex;
     flex-direction: column;
-    gap: 0em;
+    gap: 0.05em;
 }
 
 nav h1 {
-    font-size: 1.95em;
+    font-size: 2em;
     color: var(--text-primary);
-    font-weight: 600;
-    line-height: 1.1;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
 }
 
 nav h2 {
     font-size: 1.15em;
     color: var(--text-muted);
     font-weight: 600;
+    background: linear-gradient(90deg, var(--accent-green), var(--text-muted) 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 nav h3 {
@@ -168,20 +200,23 @@ nav h3 {
 .s-head {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.5em;
+    align-items: center;
+    margin-bottom: 1.6em;
 }
 
-.s-head h1 {
-    font-size: 1em;
-    letter-spacing: 0.15em;
-    font-weight: 400;
+.s-head h1, .box-see-more h1 {
+    font-size: 0.95em;
+    letter-spacing: 0.18em;
+    font-weight: 500;
     font-family: "Oswald", sans-serif;
     color: var(--text-lowlight);
 }
 
+
+
 .stack-i {
     display: flex;
-    gap: 0.6em;
+    gap: 0.65em;
     flex-wrap: wrap;
 }
 
@@ -191,18 +226,20 @@ nav h3 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 9px;
     cursor: pointer;
+    border: 1px solid transparent;
     will-change: transform;
     backface-visibility: hidden;
     transform: translateZ(0);
     transition:
-        background-color 0.15s ease,
-        border-color 0.15s ease;
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.25s var(--ease-smooth);
 }
 
 .icon-box:hover {
-    border-color: var(--accent-hover-white);
+    transform: translateY(-2px) translateZ(0);
 }
 
 .stack-icon {
@@ -217,13 +254,13 @@ nav h3 {
 
 .icon-box:hover .stack-icon,
 .icon-box:focus .stack-icon {
-    color: var(--text-primary);
+    color: var(--accent-green);
 }
 
 .icon-box::before {
     content: attr(data-title);
     position: absolute;
-    bottom: 135%;
+    bottom: 140%;
     left: 50%;
     transform: translateX(-50%) translateY(4px) scale(0.9);
     transform-style: preserve-3d;
@@ -231,8 +268,8 @@ nav h3 {
     will-change: transform;
     background-color: var(--bg-tooltip);
     color: var(--text-primary);
-    padding: 6px 10px;
-    border-radius: 6px;
+    padding: 6px 11px;
+    border-radius: 7px;
     font-size: 12px;
     font-weight: 500;
     font-family: sans-serif;
@@ -240,6 +277,7 @@ nav h3 {
     opacity: 0;
     pointer-events: none;
     z-index: 9999;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
     transition:
         opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1),
         transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -248,7 +286,7 @@ nav h3 {
 .icon-box::after {
     content: "";
     position: absolute;
-    bottom: 125%;
+    bottom: 128%;
     left: 50%;
     transform: translateX(-50%) translateY(4px) scale(0.9);
     transform-style: preserve-3d;
@@ -274,10 +312,11 @@ nav h3 {
 }
 
 .ab-info {
-    color: rgb(202, 202, 202);
+    color: rgb(206, 206, 206);
     list-style: none;
-    font-weight: 450;
-    font-size: 1.177em;
+    font-weight: 420;
+    font-size: 1.2em;
+    line-height: 1.65;
     margin-bottom: 1em;
 }
 
@@ -285,13 +324,13 @@ nav h3 {
 .projects-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1em;
+    gap: 1.25em;
     width: 100%;
 }
 
 .project-card {
-    background: var(--pro-grid-bg-color);
-    border-radius: 0.5em;
+    background: var(--pro-grid-bg-gradient);
+    border-radius: var(--radius-md);
     display: flex;
     flex-direction: column;
     border: 1px solid var(--pro-grid-border-color);
@@ -301,8 +340,9 @@ nav h3 {
     backface-visibility: hidden;
     transform: translateZ(0);
     transition:
-        border-color 0.3s ease,
-        box-shadow 0.4s ease;
+        border-color 0.35s ease,
+        box-shadow 0.45s ease,
+        transform 0.4s var(--ease-smooth);
 }
 
 .stack {
@@ -312,42 +352,48 @@ nav h3 {
 
 .project-card:hover {
     border-color: var(--card-hover-border);
-    box-shadow: 0 12px 30px var(--card-hover-shadow);
+    box-shadow: 0 16px 36px var(--card-hover-shadow);
+    transform: translateY(-4px) translateZ(0);
 }
 
 .project-image-wrapper {
     width: 100%;
     overflow: hidden;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
 }
 
 .project-image-wrapper img {
     width: 100%;
     object-fit: cover;
-    border-radius: 0.5em;
+    border-radius: var(--radius-md);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     display: block;
     will-change: transform;
     backface-visibility: hidden;
     transform: translateZ(0);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.7s var(--ease-smooth);
+}
+
+.project-card:hover .project-image-wrapper img {
+    transform: scale(1.05) translateZ(0);
 }
 
 .project-card h3 {
     color: var(--text-card-heading);
-    font-weight: 600;
-    font-size: 1.3em;
+    font-weight: 650;
+    font-size: 1.32em;
+    letter-spacing: -0.01em;
     transition: color 0.3s ease;
 }
 
 .project-card:hover h3 {
-    color: var(--text-primary);
+    color: var(--accent-green-soft);
 }
 
 .pro-det {
-    margin: 1em;
+    margin: 1.1em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -355,13 +401,14 @@ nav h3 {
 }
 
 .pro-det p {
-    font-size: 0.9em;
+    font-size: 0.92em;
+    line-height: 1.55;
     color: var(--text-card-para);
 }
 
 .pro-links {
     display: flex;
-    gap: 0.5em;
+    gap: 0.6em;
 }
 
 .project-links {
@@ -376,12 +423,13 @@ nav h3 {
     width: 1.5em;
     height: auto;
     color: var(--proj-ico);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s var(--ease-smooth);
 }
 
 .pro-links a:hover .pro-down-ico,
 .top-inside-links a:hover .tech-istyle {
-    color: var(--text-primary);
+    color: var(--accent-green);
+    transform: translateY(-2px);
 }
 
 .See-more {
@@ -406,14 +454,15 @@ nav h3 {
     align-items: center;
     width: fit-content;
     height: fit-content;
-    gap: .7em;
-    border-radius: 0.5em;
+    gap: 0.7em;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .See-more h1 {
-    font-size: 1em;
-    font-weight: 300;
-    border-radius: 0.5em;
+    font-weight: 350;
+    border-radius: var(--radius-sm);
     color: var(--text-lowlight);
     transition: color 0.3s ease;
 }
@@ -424,22 +473,22 @@ nav h3 {
     width: 0.8em;
     color: var(--text-lowlight);
     transition:
-        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.35s var(--ease-smooth),
         color 0.3s ease;
 }
 
 .See-more:hover h1 {
-    color: var(--text-primary);
+    color: var(--accent-green-soft);
 }
 
 .See-more:hover .arrow-right {
-    color: var(--text-primary);
-    transform: translateX(4px);
+    color: var(--accent-green-soft);
+    transform: translateX(5px);
 }
 
 .See-more:hover .arrow-left {
-    color: var(--text-primary);
-    transform: translateX(-4px);
+    color: var(--accent-green-soft);
+    transform: translateX(-5px);
 }
 
 .top-inside-links {
@@ -447,7 +496,7 @@ nav h3 {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    gap: 0.5em;
+    gap: 0.55em;
 }
 
 .top-links-style {
@@ -455,17 +504,18 @@ nav h3 {
     width: 1.4em;
     height: auto;
     color: rgb(202, 202, 202);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s var(--ease-smooth);
 }
 
 .top-inside-links a:hover .top-links-style {
     color: var(--text-white);
+    transform: translateY(-2px);
 }
 
 /* --- Timeline Component --- */
 .timeline-row {
     display: flex;
-    gap: 1.5em;
+    gap: 1.6em;
 }
 
 .timeline-axis {
@@ -478,19 +528,20 @@ nav h3 {
 
 .dot {
     margin: 0.6em 0;
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: var(--timeline-dot-muted);
     z-index: 2;
     transition:
         transform 0.3s ease,
-        background-color 0.3s ease;
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .timeline-row:hover .dot:not(.active) {
-    background-color: var(--text-muted);
-    transform: scale(1.2);
+    background-color: var(--text-primary);
+    transform: scale(1.25);
 }
 
 .dot.active {
@@ -512,25 +563,26 @@ nav h3 {
 }
 
 .timeline-content {
-    padding-bottom: 2em;
+    padding-bottom: 2.1em;
     display: flex;
     flex-direction: column;
-    gap: 0.3em;
+    gap: 0.35em;
     will-change: transform;
     backface-visibility: hidden;
     transform: translateZ(0);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.35s var(--ease-smooth);
 }
 
 .timeline-row:hover .timeline-content {
-    transform: translateX(2px) translateZ(0);
+    transform: translateX(3px) translateZ(0);
 }
 
 .timeline-content h3 {
     margin: 0;
     color: var(--text-timeline-heading);
-    font-weight: 500;
-    font-size: 1.2em;
+    font-weight: 550;
+    font-size: 1.22em;
+    letter-spacing: -0.01em;
 }
 
 .subtitle {
@@ -541,11 +593,11 @@ nav h3 {
 }
 
 .subtitle a {
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 .subtitle a:hover {
-    color: var(--accent-link-style);
+    color: var(--accent-green-soft);
 }
 
 .exp-title {
@@ -562,19 +614,20 @@ nav h3 {
 
 .exp-span {
     color: var(--text-exp-span);
-    font-weight: 300;
+    font-weight: 320;
 }
 
 .exp-description {
     color: var(--text-exp-desc);
     font-size: 1em;
+    line-height: 1.6;
     list-style: none;
 }
 
 .exp-stack {
     display: flex;
-    margin-top: 0.5em;
-    gap: 0.4em;
+    margin-top: 0.6em;
+    gap: 0.45em;
 }
 
 .exp-sicons {
@@ -583,12 +636,13 @@ nav h3 {
     display: block;
     color: var(--accent-icon-muted);
     transition:
-        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.3s var(--ease-smooth),
         color 0.3s ease;
 }
 
 .exp-stack .exp-sicons:hover {
-    color: var(--text-primary);
+    color: var(--accent-green);
+    transform: translateY(-2px);
 }
 
 .exp-cont {
@@ -619,7 +673,7 @@ nav h3 {
     width: 48px;
     height: 48px;
     border: 4px solid var(--spinner-border-bg);
-    border-top: 4px solid var(--text-primary);
+    border-top: 4px solid var(--accent-green);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
 }
@@ -628,7 +682,8 @@ nav h3 {
 .hr-line hr {
     border: none;
     height: 1px;
-    background-color: var(--hr-color);
+    background: linear-gradient(90deg, transparent, var(--hr-color) 30%, var(--hr-color) 70%, transparent);
+    opacity: 0.6;
 }
 
 .foot-last {
@@ -661,7 +716,8 @@ nav h3 {
 }
 
 .lastlink a:hover .top-links-style {
-    color: var(--text-primary);
+    color: var(--accent-green);
+    transform: translateY(-2px);
 }
 
 .top-header {
@@ -674,20 +730,36 @@ nav h3 {
     justify-content: flex-end;
     color: var(--top-header-text-color);
     list-style: none;
-    gap: 1em;
+    gap: 1.4em;
     padding: 0;
     margin: 0;
 }
 
 .top-header li {
     cursor: pointer;
+    position: relative;
     transition:
         color 0.3s ease,
         transform 0.3s ease;
 }
 
+.top-header li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1.5px;
+    background: var(--accent-green);
+    transition: width 0.3s var(--ease-smooth);
+}
+
 .top-header li:hover {
     color: var(--text-white);
+}
+
+.top-header li:hover::after {
+    width: 100%;
 }
 
 .connect {
@@ -700,26 +772,29 @@ nav h3 {
 
 .connect p {
     color: var(--text-connect-para);
+    line-height: 1.6;
 }
 
 .connect div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.9em 1em;
-    border-radius: 1em;
+    padding: 1em 1.2em;
+    border-radius: var(--radius-lg);
     border: 1px solid var(--pro-grid-border-color);
     max-width: 100%;
     box-sizing: border-box;
-    background-color: var(--pro-grid-bg-color);
+    background: var(--pro-grid-bg-gradient);
     transition:
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
+        border-color 0.35s ease,
+        box-shadow 0.4s ease,
+        transform 0.35s var(--ease-smooth);
 }
 
 .connect div:hover {
     border-color: var(--connect-hover-border);
-    box-shadow: 0 8px 24px var(--connect-hover-shadow);
+    box-shadow: 0 10px 28px var(--connect-hover-shadow);
+    transform: translateY(-3px);
 }
 
 /* --- GitHub Chart --- */
@@ -727,6 +802,7 @@ nav h3 {
     overflow: hidden;
     width: 100%;
     position: relative;
+    border-radius: var(--radius-sm);
 }
 
 .github-chart-scroll {
@@ -739,7 +815,7 @@ nav h3 {
     }
 
     .github-chart {
-        opacity: 0.75;
+        opacity: 0.78;
         display: block;
         height: auto;
         position: relative;
@@ -748,7 +824,7 @@ nav h3 {
     }
 
     .github-chart-wrapper:hover .github-chart {
-        opacity: 0.95;
+        opacity: 1;
     }
 }
 
@@ -764,11 +840,11 @@ nav h3 {
 
 .reveal-on-scroll {
     opacity: 0;
-    transform: translateY(25px) translateZ(0);
+    transform: translateY(28px) translateZ(0);
     backface-visibility: hidden;
     transition:
-        opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        opacity 0.9s var(--ease-smooth),
+        transform 0.9s var(--ease-smooth);
     will-change: opacity, transform;
 }
 
@@ -781,7 +857,13 @@ nav h3 {
     animation: pureFadeIn 0.6s ease-out forwards;
 }
 
-
+.category-title {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    font-weight: 450;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
 
 /* ===========================================================
    📱 MOBILE RESPONSIVE OVERRIDES
@@ -797,7 +879,7 @@ nav h3 {
         height: 3.5em;
     }
 
-    .s-head h1 {
+    .s-head h1, .box-see-more h1 {
         font-size: 0.85em;
         letter-spacing: 0.1em;
     }
@@ -811,8 +893,6 @@ nav h3 {
     nav h3 {
         font-size: 0.85em;
     }
-
-
 
     .stack-i {
         gap: 0.45em;
@@ -849,8 +929,6 @@ nav h3 {
         font-size: 0.8em;
     }
 
-
-
     .timeline-row {
         gap: 10px;
     }
@@ -883,11 +961,7 @@ nav h3 {
         gap: 0.5em;
         flex-direction: column;
     }
-
-
 }
-
-    
 
 @media (max-width: 420px) {
     .nav-img img {
@@ -964,10 +1038,4 @@ nav h3 {
         margin-left: -28px;
         margin-right: 0px !important;
     }
-}
-
-.category-title {
-    color: var(--text-muted);
-    font-size: 0.9em;
-    font-weight: 400;
 }

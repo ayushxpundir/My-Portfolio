@@ -7,7 +7,7 @@ const educations = [
     title: "IIT Madras",
     company: "Bachelor of Science",
     companyClass: "exp-span", // Custom class for styling if needed
-    subtitle: " Data Science and its Applications",
+    subtitle: " Data Science",
     description: [
     //   "Deepening knowledge in advanced statistical modeling, data structures, and machine learning.",
     //   "Engaging in practical programming frameworks using Python and ecosystem tools."
