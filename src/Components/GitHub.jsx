@@ -18,7 +18,6 @@ function GitHub() {
                 <div 
                     className="contact-info github-chart-wrapper" 
                     style={{
-                        borderRadius: 'var(--radius-sm)',
                         maxWidth: '850px',
                         margin: '0 auto',
                         color: 'var(--text-primary)',
@@ -41,21 +40,10 @@ function GitHub() {
                 </div>
             </div>
             
-            {/* Global Scoped CSS to inject fluid typography rules */}
+            {/* Global Scoped CSS with tuned compact fluid typography */}
             <style>{`
-                /* Targets the total contribution count heading text */
-                .react-github-calendar__title {
-                    font-size: clamp(0.85rem, 2.5vw, 1.1rem) !important;
-                    margin-bottom: 12px !important;
-                    color: var(--text-primary) !important;
-                }
-
-                /* Targets the month labels, weekday labels, and "Less/More" legend footer text */
-                .react-github-calendar__chart text,
-                .react-github-calendar__meta {
-                    font-size: clamp(0.7rem, 2vw, 0.85rem) !important;
-                    fill: var(--text-muted) !important;
-                    color: var(--text-muted) !important;
+                .react-activity-calendar__footer {
+                    font-size: clamp(.7em, 1.8vw, 1em);
                 }
             `}</style>
         </section>
