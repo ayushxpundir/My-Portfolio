@@ -85,8 +85,9 @@ function GitHub() {
                             blockMargin={4}
                             transformData={reverseContributions}
                             showMonthLabels={false} 
+                            year="last"
                             labels={{
-                                totalCount: '{{count}} contributions',
+                                totalCount: '{{count}} contributions in last year',
                             }}
                         />
                     </div>
@@ -100,7 +101,7 @@ function GitHub() {
                 }
 
                 .react-activity-calendar__footer, .github-profile-link span, .github-profile-link svg  {
-                    font-size: clamp(.8em, 1.8vw, 1.2em);
+                    font-size: clamp(.7em, 1.8vw, 1.2em);
                 }
 
                 .react-activity-calendar__count, .react-activity-calendar__legend-colors span {
