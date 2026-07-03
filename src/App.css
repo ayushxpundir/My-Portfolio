@@ -699,9 +699,11 @@ nav h3 {
 .con-links .top-inside-links a:nth-child(6) {
     display: none;
 }
+
 .con-links .top-inside-links a:nth-child(2) {
     display: none;
 }
+
 .con-links .top-inside-links a:nth-child(5) {
     display: none;
 }
@@ -718,7 +720,7 @@ nav h3 {
     color: var(--text-connect-para);
     font-size: 2.5em;
     font-weight: 600;
-        width: 85%;
+    width: 85%;
 }
 
 
@@ -970,6 +972,14 @@ nav h3 {
     }
 
 
+    .con-links .stack-icon {
+        width: 1em;
+    }
+
+    .con-links .top-inside-links {
+        gap: .5em;
+    }
+
     .pro-det p {
         font-size: 0.85em;
     }
@@ -1014,7 +1024,7 @@ nav h3 {
     .last-time p {
         color: var(--hr-color);
         font-weight: 500;
-        font-size: 1em;
+        font-size: clamp(.7em, 2vw, .8em);
     }
 
     .lastlink .top-links-style {
@@ -1025,6 +1035,44 @@ nav h3 {
             color 0.3s ease,
             transform 0.3s ease;
     }
+
+
+    .connect h1 {
+        color: var(--text-connect-para);
+        font-size: 1.5em;
+        font-weight: 600;
+        width: 85%;
+    }
+
+
+    .connect h2 {
+        color: var(--text-connect-para);
+        font-size: .8em;
+        font-weight: 500;
+        color: black;
+    }
+
+    .connect a {
+        padding: .5em .7em;
+        border-radius: var(--radius-md);
+        border-bottom-left-radius: 0;
+        background-color: var(--accent-icon-default);
+        width: fit-content;
+        transition: background-color 0.25s ease-in-out;
+    }
+
+    .connect a:hover {
+        background-color: var(--accent-hover-white);
+    }
+
+    .connect h3 {
+
+        color: var(--accent-icon-muted);
+        font-size: .8em;
+        font-weight: 400;
+        width: 85%;
+    }
+
 
 }
 
