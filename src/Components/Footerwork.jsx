@@ -9,7 +9,7 @@ function Footerwork() {
                 <div className="foot-last">
                     <div className="last-time">
                         <div className="lastext">
-                            <p>&copy; {new Date().getFullYear()} · Ayush Pundir</p>
+                            <p>&copy; {new Date().getFullYear()} · AYUSH PUNDIR</p>
                         </div>
                     </div>
                 </div>

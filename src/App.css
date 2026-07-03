@@ -699,6 +699,12 @@ nav h3 {
 .con-links .top-inside-links a:nth-child(6) {
     display: none;
 }
+.con-links .top-inside-links a:nth-child(2) {
+    display: none;
+}
+.con-links .top-inside-links a:nth-child(5) {
+    display: none;
+}
 
 .big-c {
     display: flex;

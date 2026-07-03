@@ -44,9 +44,9 @@ function GitHub() {
                         margin: '0 auto',
                         color: 'var(--text-primary)',
                         overflowX: 'auto', // Keeps chart responsive on micro layouts
-                        backgroundColor: '#0a0909',
-                        padding: '1.2em',
+                        padding: '1em',
                         borderRadius: '1em',
+                        backgroundColor: 'rgb(2, 8, 2)',
                     }}
                 >
                     {/* Clickable Profile Header as seen in image_050caa.png */}
@@ -60,8 +60,8 @@ function GitHub() {
                             alignItems: 'center',
                             gap: '8px',
                             textDecoration: 'none',
-                            color: '#2ee6a8', // Matching your theme accent color
                             fontWeight: '600',
+                            color: 'rgb(238, 238, 238)', // Matching your theme accent color
                             fontSize: '15px',
                             marginBottom: '14px',
                             transition: 'color 0.2s ease'
@@ -70,7 +70,7 @@ function GitHub() {
                         {/* Inline GitHub Octocat SVG icon */}
                         <FaGithub 
                             width="20" 
-                            style={{ fill: '#2ee6a8' }}
+                            style={{ fill: 'rgb(238, 238, 238)' }}
                         >
                         </FaGithub>
                         <span>@ayushxpundir</span>
@@ -95,12 +95,16 @@ function GitHub() {
             
             <style>{`
                 .github-profile-link:hover {
-                    color: #2ee6a8 !important;
+                    color: rgb(238, 238, 238) !important;
                     text-decoration: underline !important;
                 }
 
                 .react-activity-calendar__footer, .github-profile-link span, .github-profile-link svg  {
                     font-size: clamp(.8em, 1.8vw, 1.2em);
+                }
+
+                .react-activity-calendar__count, .react-activity-calendar__legend-colors span {
+                color: rgb(238, 238, 238);
                 }
             `}</style>
 
