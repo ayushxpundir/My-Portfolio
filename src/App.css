@@ -226,11 +226,11 @@ nav h3 {
     border-radius: .5em;
     cursor: pointer;
     border: 1px solid transparent;
-    will-change: transform;
+    /* will-change: transform; */
     padding: .5em;
     background-color: rgb(22, 22, 22);
-    backface-visibility: hidden;
-    transform: translateZ(0);
+    /* backface-visibility: hidden; */
+    /* transform: translateZ(0); */
     transition:
         background-color 0.2s ease,
         border-color 0.2s ease,
@@ -983,6 +983,7 @@ nav h3 {
     }
 
 }
+
 
 @media (max-width: 420px) {
     .nav-img img {

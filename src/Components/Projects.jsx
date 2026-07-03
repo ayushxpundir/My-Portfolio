@@ -5,6 +5,16 @@ import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import projectsData from "../Data/projectsData.jsx";
 
+function clearHover(e) {
+  // Remove focus from the clicked element
+  e.currentTarget.blur();
+
+  // Force hover repaint
+  requestAnimationFrame(() => {
+    document.body.offsetHeight;
+  });
+}
+
 function ProjectCard({
   image,
   url_live,
@@ -18,9 +28,12 @@ function ProjectCard({
       <div className="project-image-wrapper">
         <img src={image} alt={head} className="project-img" />
       </div>
+
       <div className="pro-det">
         <h3 className="project-head">{head}</h3>
+
         <p className="project-desc">{description}</p>
+
         <div className="project-links">
           <div className="pro-links">
             <a
@@ -29,23 +42,36 @@ function ProjectCard({
               rel="noreferrer"
               className="project-btn icon-box"
               data-title="Visit Website"
+              onClick={clearHover}
             >
               <LuGlobe className="pro-down-ico" />
             </a>
+
             <a
               href={url_github}
               target="_blank"
               rel="noreferrer"
               className="project-btn icon-box"
               data-title="View on GitHub"
+              onClick={clearHover}
             >
               <FiGithub className="pro-down-ico" />
             </a>
           </div>
-          <div className="tech-icons" style={{ display: "flex", gap: ".5em" }}>
+
+          <div
+            className="tech-icons"
+            style={{ display: "flex", gap: ".5em" }}
+          >
             {technologies.map((tech, index) => (
-              <span key={index} className="icon-box" data-title={tech.name}>
-                {React.cloneElement(tech.icon, { className: "tech-istyle" })}
+              <span
+                key={index}
+                className="icon-box"
+                data-title={tech.name}
+              >
+                {React.cloneElement(tech.icon, {
+                  className: "tech-istyle",
+                })}
               </span>
             ))}
           </div>
@@ -61,6 +87,7 @@ function Projects() {
       <div className="Projects">
         <div className="s-head">
           <h1>PROJECTS</h1>
+
           <Link
             to="/projects"
             className="See-more"
@@ -74,6 +101,7 @@ function Projects() {
             </div>
           </Link>
         </div>
+
         <div className="projects-info">
           {projectsData.slice(0, 2).map((project) => (
             <ProjectCard
