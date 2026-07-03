@@ -149,8 +149,8 @@ nav {
 }
 
 .nav-img img {
-    width: 3.8em;
-    height: 3.8em;
+    width: 4.3em;
+    height: auto;
     object-fit: cover;
     border-radius: 0.9em;
     will-change: transform;
@@ -635,7 +635,7 @@ nav h3 {
 .last-time p {
     color: var(--hr-color);
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: .9em;
 }
 
 .lastlink .top-links-style {
@@ -684,29 +684,72 @@ nav h3 {
 .connect {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 1em;
     width: 100%;
 }
 
-.connect p {
+.con-links .stack-icon {
+    width: 1.2em;
+}
+
+.con-links .top-inside-links {
+    gap: .5em;
+}
+
+.con-links .top-inside-links a:nth-child(6) {
+    display: none;
+}
+
+.big-c {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1em;
+}
+
+.connect h1 {
     color: var(--text-connect-para);
-    line-height: 1.6;
+    font-size: 2.5em;
+    font-weight: 600;
+        width: 85%;
+}
+
+
+.connect h2 {
+    color: var(--text-connect-para);
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+}
+
+.connect a {
+    padding: .5em .7em;
+    border-radius: var(--radius-md);
+    border-bottom-left-radius: 0;
+    background-color: var(--accent-icon-default);
+    width: fit-content;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.connect a:hover {
+    background-color: var(--accent-hover-white);
+}
+
+.connect h3 {
+
+    color: var(--accent-icon-muted);
+    font-size: 1.2em;
+    font-weight: 400;
+    width: 75%;
 }
 
 .connect div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1em 1.2em;
-    border-radius: var(--radius-lg);
-    max-width: 100%;
-    box-sizing: border-box;
-    background: var(--pro-grid-bg-gradient);
-    transition:
-        border-color 0.35s ease,
-        box-shadow 0.4s ease,
-        transform 0.35s var(--ease-smooth);
+    align-items: flex-start;
+    width: 100%;
+    gap: 1em;
 }
 
 /* --- GitHub Chart --- */
@@ -867,11 +910,6 @@ nav h3 {
         width: 100%;
     }
 
-    .connect div:hover {
-        border-color: var(--connect-hover-border);
-        box-shadow: 0 10px 28px var(--connect-hover-shadow);
-        transform: translateY(-3px);
-    }
 }
 
 /* ===========================================================
@@ -1013,7 +1051,4 @@ nav h3 {
         font-size: 1em;
     }
 
-    .connect p {
-        font-size: 0.8em;
-    }
 }
