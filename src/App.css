@@ -312,7 +312,7 @@ nav h3 {
 
 .project-card {
     background: var(--pro-grid-bg-gradient);
-    border-radius: var(--radius-md);
+    border-radius: 1em;
     display: flex;
     flex-direction: column;
     /*border: 1px solid var(--pro-grid-border-color);*/
@@ -337,7 +337,7 @@ nav h3 {
 .project-image-wrapper {
     width: 100%;
     overflow: hidden;
-    border-radius: var(--radius-md);
+    border-radius: .5em;
     border-bottom-left-radius: 0;
 
 }
