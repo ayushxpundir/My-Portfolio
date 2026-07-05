@@ -206,7 +206,7 @@ nav h3 {
 .box-see-more h1 {
     font-size: 0.95em;
     letter-spacing: 0.18em;
-    font-weight: 500;
+    font-weight: 350;
     font-family: "Oswald", sans-serif;
     color: var(--text-lowlight);
 }
@@ -331,7 +331,7 @@ nav h3 {
 
 .stack {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .project-image-wrapper {

@@ -1,6 +1,6 @@
 :root {
     --root-border: rgb(78, 78, 78);
-    --grid-color: rgb(58, 58, 58);
+    --grid-color: rgb(59, 59, 59);
 }
 
 * {
@@ -39,17 +39,8 @@ body {
 body {
     margin: 0;
     min-height: 100vh;
-    background-color: #0a0a0a;
+    background-color: #050505;
     /* The deepest dark shade from the image */
-
-    /* Layering fluid color blobs across the screen */
-    background-image:
-        radial-gradient(at 10% 40%, rgba(0, 0, 0, 0.5) 0px, transparent 50%),
-        radial-gradient(at 50% 30%,
-            rgba(24, 24, 24, 0.45) 0px,
-            transparent 60%),
-        radial-gradient(at 90% 70%, rgba(10, 9, 10, 0.3) 0px, transparent 50%),
-        radial-gradient(at 85% 20%, rgba(17, 16, 16, 0.2) 0px, transparent 40%);
 
     background-attachment: fixed;
     position: relative;
