@@ -164,7 +164,6 @@ nav h1 {
     font-size: 2em;
     color: var(--text-primary);
     font-weight: 600;
-    line-height: 1;
     letter-spacing: -0.01em;
 }
 
@@ -494,7 +493,7 @@ nav h3 {
 }
 
 .timeline-content {
-    padding-bottom: 2em;
+    padding-bottom: 1.7em;
     display: flex;
     flex-direction: column;
     gap: 0.35em;

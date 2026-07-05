@@ -13,7 +13,7 @@ const experiences = [
         title: "Developer",
         company: "Classified",
         companyClass: "exp-span es1",
-        subtitle: "Stealth, Full-Time | Mar 26 - Present",
+        subtitle: "Stealth, Full-Time | Mar 26 — Present",
         active: true,
         description: [],
         stack: [],
@@ -23,7 +23,7 @@ const experiences = [
         title: "UI & Graphic Designer",
         company: "Freelancer",
         companyClass: "exp-span",
-        subtitle: "Remote, Part-Time | Jul 24 - Feb 26",
+        subtitle: "Remote, Part-Time | Jul 24 — Feb 26",
         active: false,
         description: [
             "Designed responsive websites across multiple platforms with a 98% client satisfaction rate. Optimized UI and site layouts, increasing average user engagement by 35% for global clients.",

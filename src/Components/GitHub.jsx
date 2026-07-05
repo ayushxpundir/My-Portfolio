@@ -83,7 +83,7 @@ function GitHub() {
     .react-activity-calendar__footer,
     .react-activity-calendar__count, 
     .react-activity-calendar__legend-colors span {
-        font-size: clamp(0.65rem, 1.5vw, 1rem) !important;
+        font-size: clamp(0.695rem, 1.5vw, 1rem) !important;
     }
 
     .react-activity-calendar__footer,

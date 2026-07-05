@@ -2,7 +2,7 @@
 const educations = [
   {
     id: 1,
-    active: true,
+    active: false,
     title: "IIT Madras",
     company: "Bachelor of Science",
     companyClass: "exp-span", // Custom class for styling if needed
