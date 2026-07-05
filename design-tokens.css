@@ -28,14 +28,6 @@
     --connect-hover-border: rgba(0, 221, 153, 0.3);
     --connect-hover-shadow: rgba(0, 0, 0, 0.45);
     --spinner-border-bg: #2a2a2a;
-    --icon-surface: #161616;
-    --icon-surface-hover: #1f1f1f;
-    --icon-surface-shadow: rgba(0, 0, 0, 0.25);
-    --surface-elevated: rgba(18, 18, 20, 0.9);
-    --surface-border: rgba(255, 255, 255, 0.07);
-    --theme-toggle-bg: #141416;
-    --theme-toggle-text: #f4f4f4;
-    --theme-toggle-shadow: rgba(0, 0, 0, 0.25);
 
     /* Accent Highlight Colors */
     --accent-green: #00dd99;
@@ -75,7 +67,7 @@ html[data-theme="light"] {
 
     --text-primary: rgb(20, 20, 20);
     --text-muted: rgb(110, 105, 105);
-    --text-lowlight: rgb(100, 97, 97);
+    --text-lowlight: rgb(135, 132, 132);
     --text-timeline-sub: #707070;
     --border-color: rgb(210, 210, 210);
     --hr-color: #b0b0b0;
@@ -89,30 +81,23 @@ html[data-theme="light"] {
     --text-connect-para: rgb(40, 40, 40);
     --text-see-more: rgb(55, 55, 55);
     --card-hover-border: rgba(0, 150, 100, 0.35);
-    --card-hover-shadow: rgba(43, 43, 43, 0.12);
+    --card-hover-shadow: rgba(0, 0, 0, 0.12);
     --connect-hover-border: rgba(0, 150, 100, 0.3);
     --connect-hover-shadow: rgba(0, 0, 0, 0.1);
     --spinner-border-bg: #e2e2e2;
-    --icon-surface: #f8e9e9;
-    --icon-surface-hover: #f4f4f4;
-    --icon-surface-shadow: rgba(15, 15, 15, 0.08);
-    --surface-elevated: rgba(255, 255, 255, 0.86);
-    --surface-border: rgba(17, 17, 17, 0.08);
-    --theme-toggle-bg: #f7f7f7;
-    --theme-toggle-text: #131313;
-    --theme-toggle-shadow: rgba(12, 12, 12, 0.08);
 
     --accent-green: #00a86b;
     --accent-green-soft: #009661;
     --accent-green-alpha: rgba(0, 168, 107, 0.16);
-    --accent-hover-white: #d8d6d6;
+    --accent-hover-white: #1a1a1a;
+    --icon-fg: #1a1a1a;
     --accent-icon-default: #ececec;
     --accent-icon-muted: rgb(70, 65, 65);
     --accent-link-style: rgb(30, 30, 30);
 
     --pro-grid-border-color: rgb(225, 225, 225);
     --pro-grid-bg-color: #f5f5f6;
-    --pro-grid-bg-gradient: linear-gradient(155deg, #eeeeee 0%, #e2e2e2 100%);
+    --pro-grid-bg-gradient: linear-gradient(155deg, #ffffff 0%, #f0f0f2 100%);
     --timeline-line-color: #dcdcdc;
     --timeline-dot-muted: #a0a0a0;
 
@@ -283,7 +268,7 @@ nav h3 {
     border: 1px solid transparent;
     /* will-change: transform; */
     padding: .5em;
-    background-color: var(--icon-surface);
+    background-color: rgb(22, 22, 22);
     /* backface-visibility: hidden; */
     /* transform: translateZ(0); */
     transition:
@@ -348,7 +333,7 @@ nav h3 {
 }
 
 .ab-info {
-    color: var(--text-connect-para);
+    color: rgb(206, 206, 206);
     list-style: none;
     font-weight: 420;
     font-size: 1.2em;
@@ -508,7 +493,7 @@ nav h3 {
     display: flex;
     width: .9em;
     height: auto;
-    color: var(--proj-ico);
+    color: rgb(202, 202, 202);
     transition:
         color 0.3s ease,
         transform 0.3s var(--ease-smooth);
@@ -709,10 +694,6 @@ nav h3 {
 .top-header {
     margin-bottom: 2em;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: fit-content;
 }
 
 .top-header ul {
@@ -721,18 +702,17 @@ nav h3 {
     color: var(--top-header-text-color);
     list-style: none;
     gap: 1.4em;
+    padding: 0;
+    margin: 0;
 }
 
-
 .top-header li {
-    display: block;
     cursor: pointer;
     position: relative;
     transition:
         color 0.3s ease,
+        transform 0.3s ease;
 }
-
-
 
 .connect {
     display: flex;
@@ -778,9 +758,9 @@ nav h3 {
 
 
 .connect h2 {
-    color: rgb(17, 17, 17);
     font-size: 1em;
     font-weight: 500;
+    color: rgb(20, 20, 20);
 }
 
 .connect a {
@@ -878,7 +858,6 @@ nav h3 {
     .nav-img:hover img {
         transform: scale(1.05) rotate(1.5deg) perspective(1px) translateZ(0);
         border-color: var(--accent-green);
-        box-shadow: none;
     }
 
     .timeline-row:hover .dot:not(.active) {
@@ -980,56 +959,6 @@ nav h3 {
     }
 
 }
-
-.github-profile-link span,
-.react-activity-calendar__footer,
-.react-activity-calendar__count,
-.react-activity-calendar__legend-colors span {
-    font-size: clamp(0.695rem, 1.5vw, 1rem) !important;
-}
-
-.react-activity-calendar__footer,
-.react-activity-calendar__count,
-.react-activity-calendar__legend-colors span {
-    color: var(--text-primary);
-}
-
-.github-profile-link {
-    color: var(--text-primary);
-    width: fit-content;
-    padding: 0.2rem 0.15rem;
-    border-radius: 999px;
-}
-
-.github-profile-link svg {
-    fill: var(--text-primary);
-}
-
-.github-profile-link:hover {
-    text-decoration: underline;
-}
-
-.github-chart-wrapper svg {
-    display: block;
-}
-
-.theme-toggle-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: var(--top-header-text-color);
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.theme-toggle-button:hover {
-    color: var(--accent-green);
-}
-
-
 
 /* ===========================================================
        📱 MOBILE RESPONSIVE OVERRIDES
@@ -1157,9 +1086,9 @@ nav h3 {
 
 
     .connect h2 {
-        color: rgb(22, 22, 22);
         font-size: .8em;
         font-weight: 500;
+        color: rgb(19, 19, 19);
     }
 
     .connect a {

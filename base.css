@@ -1,13 +1,13 @@
 :root {
     --root-border: rgb(78, 78, 78);
-    --grid-color: rgb(48, 48, 48);
+    --grid-color: rgb(59, 59, 59);
     --bg-body: #050505;
     --grid-opacity: 0.12;
 }
 
 html[data-theme="light"] {
     --root-border: rgb(210, 210, 210);
-    --grid-color: rgb(104, 104, 104);
+    --grid-color: rgb(215, 215, 215);
     --bg-body: #f7f7f7;
     --grid-opacity: 0.06;
 }

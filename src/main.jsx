@@ -1,3 +1,5 @@
+import "../base.css";
+import "../design-tokens.css";
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'

@@ -1,10 +1,11 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { GitHubCalendar } from "react-github-calendar";
 import { FaGithub } from "react-icons/fa";
+import useTheme from "../useTheme";
 
 function GitHub() {
-    const [tooltip, setTooltip] = useState(null);
     const containerRef = useRef(null);
+    const [theme] = useTheme();
 
     const customGreenTheme = {
         dark: [
@@ -13,6 +14,13 @@ function GitHub() {
             '#007d57',
             '#2ee6a8',
             '#00dd99'
+        ],
+        light: [
+            '#eff4f1',
+            '#d8efe4',
+            '#9dddbf',
+            '#58c996',
+            '#00a86b'
         ],
     };
 
@@ -43,26 +51,18 @@ function GitHub() {
                             gap: '8px',
                             textDecoration: 'none',
                             fontWeight: '600',
-                            color: 'rgb(238, 238, 238)',
                             marginBottom: '8px',
                             transition: 'color 0.2s ease'
                         }}
                     >
-                        {/* Changed width to size={18} to match the typography scale accurately */}
-                        <FaGithub
-                            size={18}
-                            style={{
-                                fill: 'rgb(238, 238, 238)',
-                                display: 'block'
-                            }}
-                        />
+                        <FaGithub size={18} style={{ display: 'block' }} />
                         <span>@ayushxpundir</span>
                     </a>
 
                     <div className="github-chart-scroll">
                         <GitHubCalendar
                             username="ayushxpundir"
-                            colorScheme="dark"
+                            colorScheme={theme}
                             theme={customGreenTheme}
                             blockSize={12}
                             blockMargin={4}
@@ -76,31 +76,7 @@ function GitHub() {
                     </div>
                 </div>
             </div>
-
-            <style>{`
-    /* Switched em to rem to bypass component nesting constraints */
-    .github-profile-link span, 
-    .react-activity-calendar__footer,
-    .react-activity-calendar__count, 
-    .react-activity-calendar__legend-colors span {
-        font-size: clamp(0.695rem, 1.5vw, 1rem) !important;
-    }
-
-    .react-activity-calendar__footer,
-    .react-activity-calendar__count, 
-    .react-activity-calendar__legend-colors span {
-        color: rgb(238, 238, 238);
-    }
-
-    .github-profile-link:hover {
-        text-decoration: underline;
-    }
-
-    svg {
-        display: block;
-    }
-`}</style>
-        </section >
+        </section>
     );
 }
 
