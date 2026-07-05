@@ -85,8 +85,8 @@ function Home() {
     <>
       <div className="reveal-on-scroll"><Header /></div>
       <div className="reveal-on-scroll"><About /></div>
-      <div className="reveal-on-scroll"><Stack /></div>
       <div className="reveal-on-scroll"><Experience /></div>
+      <div className="reveal-on-scroll"><Stack /></div>
       <div className="reveal-on-scroll"><Projects /></div>
       <div className="reveal-on-scroll"><Certifications /></div>
       <div className="reveal-on-scroll"><Education /></div>

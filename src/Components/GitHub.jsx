@@ -44,9 +44,6 @@ function GitHub() {
                         margin: '0 auto',
                         color: 'var(--text-primary)',
                         overflowX: 'auto', // Keeps chart responsive on micro layouts
-                        padding: '1em',
-                        borderRadius: '1em',
-                        backgroundColor: 'rgb(2, 8, 2)',
                     }}
                 >
                     {/* Clickable Profile Header as seen in image_050caa.png */}

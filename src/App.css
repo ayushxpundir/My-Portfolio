@@ -619,7 +619,6 @@ nav h3 {
 .foot-last {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
     width: 100%;
 }
 
@@ -629,7 +628,6 @@ nav h3 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    gap: 0.5em;
 }
 
 .last-time p {
