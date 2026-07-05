@@ -5,7 +5,8 @@ import certifications from "../Data/Certificationsdata.jsx";
 
 function CertificationItem({ cert }) {
   return (
-    <div className="timeline-row">
+    <div className="exp-cont">
+      <div className="timeline-row">
       <div className="timeline-axis">
         <div className="dot"></div>
         <div className="line"></div>
@@ -42,6 +43,7 @@ function CertificationItem({ cert }) {
           })}
         </div>
       </div>
+    </div>
     </div>
   );
 }

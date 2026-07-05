@@ -90,15 +90,6 @@
     }
 }
 
-@keyframes pulse-glow {
-    0% {
-        box-shadow: 0 0 6px 1px var(--accent-green-alpha, rgba(0, 240, 150, 0.3));
-    }
-
-    100% {
-        box-shadow: 0 0 16px 5px var(--accent-green-alpha, rgba(0, 240, 150, 0.6));
-    }
-}
 
 @keyframes fadeOutCurtain {
     0% {
@@ -490,8 +481,9 @@ nav h3 {
 .dot.active {
     background-color: var(--accent-green);
     box-shadow: 0 0 8px 2px var(--accent-green-alpha, rgba(0, 240, 150, 0.4));
-    animation: pulse-glow 2s infinite alternate ease-in-out;
+    z-index: 2;
 }
+
 
 .line {
     width: 1.5px;
@@ -502,7 +494,7 @@ nav h3 {
 }
 
 .timeline-content {
-    padding-bottom: 2.1em;
+    padding-bottom: 2em;
     display: flex;
     flex-direction: column;
     gap: 0.35em;
@@ -511,6 +503,13 @@ nav h3 {
     transform: translateZ(0);
     transition: transform 0.35s var(--ease-smooth);
 }
+
+
+.exp-cont:last-child .timeline-content {
+    padding-bottom: 0;
+}
+
+
 
 .timeline-content h3 {
     margin: 0;
@@ -557,7 +556,6 @@ nav h3 {
 
 .exp-stack {
     display: flex;
-    margin-top: 0.6em;
     gap: 0.45em;
 }
 
@@ -825,6 +823,15 @@ nav h3 {
         transform: scale(1.05) rotate(1.5deg) perspective(1px) translateZ(0);
         border-color: var(--accent-green);
         box-shadow: 0 8px 26px rgba(0, 221, 153, 0.2);
+    }
+
+    .timeline-row:hover .dot:not(.active) {
+        background-color: var(--text-primary);
+        transform: scale(1.25);
+    }
+
+    .timeline-row:hover .dot.active {
+        transform: scale(1.25);
     }
 
     .icon-box:hover {
