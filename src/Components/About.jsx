@@ -5,14 +5,13 @@ function About() {
     <>
       <section>
         <div className="about">
-          <div className="s-head">
+          {/* <div className="s-head">
             <h1>ABOUT</h1>
-          </div>
+          </div> */}
           <div className="ab-info">
             <ol>
               <li>
-                I build complete web systems that solve real problems, using
-                modern engineering and design tools.
+                I build complete web systems.
               </li>
             </ol>
           </div>

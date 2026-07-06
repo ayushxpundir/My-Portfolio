@@ -1,4 +1,5 @@
 import profile from "../assets/profile.webp";
+import About from "./About";
 
 function Header() {
     return (
@@ -13,6 +14,7 @@ function Header() {
                         </div>
                     </div>
                 </nav>
+                <About/>
             </header>
         </>
     )
