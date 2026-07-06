@@ -78,7 +78,7 @@ html[data-theme="light"] {
     --text-lowlight: rgb(100, 97, 97);
     --text-timeline-sub: #707070;
     --border-color: rgb(210, 210, 210);
-    --hr-color: #b0b0b0;
+    --hr-color: #8a8a8a;
 
     --text-white: #0a0a0b;
     --text-card-heading: rgb(20, 20, 20);
@@ -681,7 +681,6 @@ nav h3 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 2em;
 }
 
 .last-time {
@@ -708,8 +707,7 @@ nav h3 {
 }
 
 .top-header {
-    margin-top: 2em;
-    margin-bottom: 3.5em;
+    margin-bottom: 4em;
     width: 100%;
     display: flex;
     align-items: center;

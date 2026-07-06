@@ -79,8 +79,8 @@ body::before {
 #root {
     width: 100%;
     max-width: 45em;
-    padding: 1.5em;
-    gap: 3.5em;
+    padding: 2em;
+    gap: 4em;
     height: fit-content;
     /*
   border-left: 1.5px solid var(--root-border);
