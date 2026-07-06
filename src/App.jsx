@@ -15,6 +15,7 @@ import Footerwork from './Components/Footerwork'
 import Topheader from './Components/Topheader'
 import Connect from './Components/Connect'
 import Education from './Components/Education'
+import { Analytics } from "@vercel/analytics/next"
 
 // Self-contained Loader component
 function Loader() {
