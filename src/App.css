@@ -708,6 +708,7 @@ nav h3 {
 }
 
 .top-header {
+    margin-top: 2em;
     margin-bottom: 3.5em;
     width: 100%;
     display: flex;
