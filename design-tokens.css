@@ -942,7 +942,6 @@ nav h3 {
 
     .exp-stack .exp-sicons:hover {
         color: var(--accent-green);
-        transform: translateY(-2px);
     }
 
     .lastlink a:hover .top-links-style {

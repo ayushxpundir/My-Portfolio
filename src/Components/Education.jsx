@@ -1,20 +1,34 @@
 import educations from "../Data/educationData";
+
+function LogoAside({ logo }) {
+    if (!logo?.src) return null;
+
+    return (
+        <aside className="icon-box" data-title={logo.heading}>
+            <img src={logo.src} alt={logo.alt || logo.heading} className="edu-logo-img" />
+        </aside>
+    );
+}
+
 function EducationItem({ edu }) {
     return (
-        <div className="exp-cont edu-cont"> {/* Added an extra class for safety */}
+        <div className="exp-cont edu-cont">
             <div className="timeline-row">
-                <div className="timeline-axis">
-                    <div className={`dot ${edu.active ? "active" : ""}`}></div>
-                    <div className="line"></div>
-                </div>
-                <div className="timeline-content">
-                    <div className="exp-title">
-                        <h3>
-                            {edu.title} · <span className={edu.companyClass}>{edu.company}</span>
-                        </h3>
-                    </div>
-                    <p className="subtitle">{edu.subtitle}</p>
 
+                <div className="timeline-content">
+                    <div className="edu-side-l">
+                        <LogoAside logo={edu.logo} />
+
+                        <div>
+                            <div className="exp-title">
+                                <h3>
+                                    {edu.title} · <span className={edu.companyClass}>{edu.company}</span>
+                                </h3>
+                            </div>
+                            <p className="subtitle">{edu.subtitle}</p>
+
+                        </div>
+                    </div>
                     {edu.description.length > 0 && (
                         <div className="exp-description">
                             <ol>
@@ -54,17 +68,6 @@ function Education() {
                         ))}
                     </div>
                 </div>
-
-                {/* <Link
-                    to="/education"
-                    className="See-more"
-                    onClick={() => sessionStorage.setItem("homeScrollY", window.scrollY)}
-                >
-                    <div className="box-see-more">
-                        <h1>Show all education</h1>
-                        <FaArrowRight className="arrow-right" />
-                    </div>
-                </Link> */}
             </div>
         </section>
     );

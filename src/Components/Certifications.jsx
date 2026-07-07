@@ -7,43 +7,35 @@ function CertificationItem({ cert }) {
   return (
     <div className="exp-cont">
       <div className="timeline-row">
-      <div className="timeline-axis">
-        <div className="dot"></div>
-        <div className="line"></div>
-      </div>
-      <div className="timeline-content">
-        <div className="exp-title">
-          <h3>
-            {cert.title} ·{" "}
-            <span className={cert.companyClass}>{cert.company} </span>{" "}
-          </h3>
-        </div>
-        <p className="subtitle">
-          {" "}
-          <a href={cert.link} target="_blank" rel="noreferrer">
-            {cert.issued} <LuExternalLink className="certext" />
-          </a>
-        </p>
-
-        <div className="exp-description">
-          <ol>
-            {cert.description.map((line, i) => (
-              <li key={i}>{line}</li>
-            ))}
-          </ol>
-        </div>
-        <div className="exp-stack">
-          {cert.stack.map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <div className="icon-box" data-title={item.title} key={i}>
-                <Icon className="exp-sicons" />
+        <div className="timeline-content">
+          <div className="st-side">
+            <div className="exp-stack">
+              {cert.stack.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div className="icon-box" data-title={item.title} key={i}>
+                    <Icon className="exp-sicons" />
+                  </div>
+                );
+              })}
+            </div>
+            <div>
+              <div className="exp-title">
+                <h3>
+                  {cert.title} ·{" "}
+                  <span className={cert.companyClass}>{cert.company} </span>{" "}
+                </h3>
               </div>
-            );
-          })}
+              <p className="subtitle">
+                {" "}
+                <a href={cert.link} target="_blank" rel="noreferrer">
+                  {cert.issued} <LuExternalLink className="certext" />
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }

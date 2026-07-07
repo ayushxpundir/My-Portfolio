@@ -1,6 +1,6 @@
 import CopilotFillIcon from "@iconify-react/mingcute/copilot-fill";
-import MicrosoftFillIcon from '@iconify-react/ri/microsoft-fill';
-import ClaudeFillIcon from '@iconify-react/ri/claude-fill';
+import MicrosoftIconIcon from '@iconify-react/logos/microsoft-icon';
+import ClaudeIcon from '@iconify-react/selfhst/claude';
 import AnthropicFillIcon from '@iconify-react/ri/anthropic-fill';
 
 
@@ -13,27 +13,21 @@ const certifications = [
         companyClass: "exp-span",
         link: "https://verify.skilljar.com/c/oxnn52yi2k3o",
         issued: "Show credentials",
-        description: [
-            "I learned about leveraging Claude's core strengths, like analyzing complex data and adapting its communication style to match mine.",
-        ],
         stack: [
-            { title: "Anthropic", icon: AnthropicFillIcon },
-            { title: "Claude", icon: ClaudeFillIcon },
+            // { title: "Anthropic", icon: AnthropicFillIcon },
+            { title: "Claude", icon: ClaudeIcon },
         ],
     },
     {
         id: 2,
-        title: "Explore Generative AI",
+        title: "Generative AI",
         company: "Microsoft",
         companyClass: "exp-span",
         link: "https://learn.microsoft.com/en-us/users/ayushpundir-9738/achievements/7de58n7z?ref=https%3A%2F%2Fwww.linkedin.com%2F",
         issued: "Show credentials",
-        description: [
-            "I learned about the fundamentals of generative AI and how tools like Microsoft Copilot are transforming content creation, text-to-image visualization, and productivity.",
-        ],
         stack: [
-            { title: "Microsoft", icon: MicrosoftFillIcon },
-            { title: "Copilot", icon: CopilotFillIcon },
+            { title: "Microsoft", icon: MicrosoftIconIcon },
+            // { title: "Copilot", icon: CopilotFillIcon },
         ],
     },
 ];

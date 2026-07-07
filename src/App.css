@@ -305,7 +305,7 @@ nav h3 {
 .icon-box::before {
     content: attr(data-title);
     position: absolute;
-    bottom: 140%;
+    bottom: 150%;
     left: 50%;
     transform: translateX(-50%) translateY(4px) scale(0.9);
     transform-style: preserve-3d;
@@ -330,7 +330,7 @@ nav h3 {
 .icon-box::after {
     content: "";
     position: absolute;
-    bottom: 128%;
+    bottom: 140%;
     left: 50%;
     transform: translateX(-50%) translateY(4px) scale(0.9);
     transform-style: preserve-3d;
@@ -345,6 +345,26 @@ nav h3 {
     transition:
         opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1),
         transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edu-logo-aside img {
+    display: block;
+    height: fit-content;
+}
+
+.edu-side-l {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.edu-logo-img {
+    width: clamp(1.4rem, 5vw, 2rem);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    align-self: center;
 }
 
 .ab-info {
@@ -589,6 +609,18 @@ nav h3 {
     gap: 0.3em;
 }
 
+.st-side {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+
+.st-side .exp-sicons {
+    width: clamp(1.4rem, 5vw, 2rem);
+    height: auto;
+}
+
+
 .subtitle a {
     transition: color 0.3s ease;
 }
@@ -598,6 +630,7 @@ nav h3 {
     align-items: center;
     gap: 2em;
 }
+
 
 .certext {
     display: inline-block;
@@ -621,6 +654,7 @@ nav h3 {
     display: flex;
     gap: 0.45em;
 }
+
 
 .exp-sicons {
     width: 1.2em;
@@ -749,7 +783,7 @@ nav h3 {
     gap: .5em;
 }
 
-.con-links .top-inside-links a:nth-child(6) {
+.con-links .top-inside-links a:nth-child(4) {
     display: none;
 }
 
@@ -963,7 +997,6 @@ nav h3 {
 
     .exp-stack .exp-sicons:hover {
         color: var(--accent-green);
-        transform: translateY(-2px);
     }
 
     .lastlink a:hover .top-links-style {
@@ -1040,7 +1073,7 @@ nav h3 {
         max-width: 100%;
     }
 
-  
+
 
     .nav-img img {
         width: 3.5em;
