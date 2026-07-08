@@ -54,7 +54,7 @@
     --timeline-dot-muted: #8a8a8a;
 
     --proj-ico: rgb(210, 210, 210);
-    --top-header-text-color: rgb(214, 214, 214);
+    --top-header-text-color: rgb(151, 151, 151);
 
     /* Spacing & motion tokens (identical in both themes) */
     --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
@@ -113,11 +113,11 @@ html[data-theme="light"] {
     --pro-grid-border-color: rgb(225, 225, 225);
     --pro-grid-bg-color: #f5f5f6;
     --pro-grid-bg-gradient: linear-gradient(155deg, #eeeeee 0%, #e2e2e2 100%);
-    --timeline-line-color: #dcdcdc;
+    --timeline-line-color: #bdbdbd;
     --timeline-dot-muted: #a0a0a0;
 
     --proj-ico: rgb(60, 60, 60);
-    --top-header-text-color: rgb(45, 45, 45);
+    --top-header-text-color: rgb(66, 66, 66);
 }
 
 * {
@@ -272,6 +272,8 @@ nav h3 {
     flex-wrap: wrap;
 }
 
+
+
 /* --- Tooltips & Icons --- */
 .icon-box {
     position: relative;
@@ -294,7 +296,7 @@ nav h3 {
 
 .stack-icon {
     width: 1.4em;
-    height: auto;
+    height: 1.4em;
     color: var(--icon-fg);
     display: flex;
     justify-content: center;
@@ -305,7 +307,7 @@ nav h3 {
 .icon-box::before {
     content: attr(data-title);
     position: absolute;
-    bottom: 150%;
+    bottom: 130%;
     left: 50%;
     transform: translateX(-50%) translateY(4px) scale(0.9);
     transform-style: preserve-3d;
@@ -330,7 +332,7 @@ nav h3 {
 .icon-box::after {
     content: "";
     position: absolute;
-    bottom: 140%;
+    bottom: 120%;
     left: 50%;
     transform: translateX(-50%) translateY(4px) scale(0.9);
     transform-style: preserve-3d;
@@ -577,10 +579,9 @@ nav h3 {
 }
 
 .timeline-content {
-    padding-bottom: 1.7em;
     display: flex;
+    gap: .5em;
     flex-direction: column;
-    gap: 0.35em;
     will-change: transform;
     backface-visibility: hidden;
     transform: translateZ(0);

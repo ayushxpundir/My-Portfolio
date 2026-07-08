@@ -13,8 +13,8 @@ function CertificationItem({ cert }) {
               {cert.stack.map((item, i) => {
                 const Icon = item.icon;
                 return (
-                  <div className="icon-box" data-title={item.title} key={i}>
-                    <Icon className="exp-sicons" />
+                  <div className="icon-box" data-title={item.title} key={i} style={{ backgroundColor: item.bg }}>
+                    <Icon className="exp-sicons" style={{ color: item.color }} />
                   </div>
                 );
               })}

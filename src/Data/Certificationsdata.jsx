@@ -14,8 +14,8 @@ const certifications = [
         link: "https://verify.skilljar.com/c/oxnn52yi2k3o",
         issued: "Show credentials",
         stack: [
-            // { title: "Anthropic", icon: AnthropicFillIcon },
-            { title: "Claude", icon: ClaudeIcon },
+            { title: "Anthropic", icon: AnthropicFillIcon, color:"#CC785C" },
+            // { title: "Claude", icon: ClaudeIcon },
         ],
     },
     {

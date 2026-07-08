@@ -3,13 +3,15 @@
     --grid-color: rgb(48, 48, 48);
     --bg-body: #050505;
     --grid-opacity: 0.12;
+    --root-bg-color: rgb(12, 12, 12);
 }
 
 html[data-theme="light"] {
-    --root-border: rgb(210, 210, 210);
+    --root-border: rgb(248, 243, 243);
     --grid-color: rgb(104, 104, 104);
-    --bg-body: #f7f7f7;
+    --bg-body: #e6dcdc;
     --grid-opacity: 0.06;
+    --root-bg-color: rgb(226, 226, 226);
 }
 
 * {
@@ -77,11 +79,11 @@ body::before {
 }
 
 #root {
+    /* background-color: var(--root-bg-color); */
     width: 100%;
     max-width: 45em;
+    min-height: 100%;
     padding: 2em;
-    gap: 4em;
-    height: fit-content;
     /*
   border-left: 1.5px solid var(--root-border);
   border-right: 1.5px solid var(--root-border);
@@ -89,3 +91,6 @@ body::before {
     display: flex;
     flex-direction: column;
 }
+
+
+

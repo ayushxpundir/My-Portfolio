@@ -46,7 +46,7 @@
     --timeline-dot-muted: #8a8a8a;
 
     --proj-ico: rgb(210, 210, 210);
-    --top-header-text-color: rgb(214, 214, 214);
+    --top-header-text-color: rgb(211, 211, 211);
 
     /* Spacing & motion tokens (identical in both themes) */
     --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
@@ -545,7 +545,6 @@ nav h3 {
     padding-bottom: 1.7em;
     display: flex;
     flex-direction: column;
-    gap: 0.35em;
     will-change: transform;
     backface-visibility: hidden;
     transform: translateZ(0);

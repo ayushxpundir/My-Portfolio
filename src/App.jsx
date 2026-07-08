@@ -123,19 +123,38 @@ function App() {
         <InstantStartAtTop />
         <ScrollRevealWatcher showLoader={showLoader} />
 
-        {/* Global Nav Bar - Fades in softly on initial app entry only */}
-        <div className={!showLoader ? "first-load-fade" : ""} style={{ opacity: showLoader ? 0 : 1 }}>
-          <Topheader />
+        {/* App shell — inline styles used directly so nothing in
+            App.css or index.css can silently override/block them */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100dvh',
+            gap: '4rem',
+          }}
+        >
+          {/* Global Nav Bar - Fades in softly on initial app entry only */}
+          <div className={!showLoader ? "first-load-fade" : ""} style={{ opacity: showLoader ? 0 : 1 }}>
+            <Topheader />
+          </div>
+
+          {/* Main content: flex 1 makes this stretch, pushing footer down */}
+          <main style={{ 
+            flex: 1, 
+            display:'flex',
+            flexDirection: 'column',
+            gap: '4rem',
+            }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<div key="projects-page" className="reveal-on-scroll"><AllProjects /></div>} />
+              <Route path="/experience" element={<div key="experience-page" className="reveal-on-scroll"><AllExperience /></div>} />
+              <Route path="/certifications" element={<div key="certs-page" className="reveal-on-scroll"><AllCertifications /></div>} />
+            </Routes>
+          </main>
+
+          <ContextAwareFooter />
         </div>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<div key="projects-page" className="reveal-on-scroll"><AllProjects /></div>} />
-          <Route path="/experience" element={<div key="experience-page" className="reveal-on-scroll"><AllExperience /></div>} />
-          <Route path="/certifications" element={<div key="certs-page" className="reveal-on-scroll"><AllCertifications /></div>} />
-        </Routes>
-
-        <ContextAwareFooter />
       </BrowserRouter>
     </>
   );
