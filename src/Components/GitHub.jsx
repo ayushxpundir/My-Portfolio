@@ -68,10 +68,6 @@ function GitHub() {
                             blockMargin={4}
                             transformData={reverseContributions}
                             showMonthLabels={false}
-                            year="last"
-                            labels={{
-                                totalCount: '{{count}} contributions in last year',
-                            }}
                         />
                     </div>
                 </div>
