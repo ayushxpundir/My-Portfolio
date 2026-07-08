@@ -304,6 +304,8 @@ nav h3 {
     transition: color 0.3s ease;
 }
 
+
+
 .icon-box::before {
     content: attr(data-title);
     position: absolute;
@@ -658,9 +660,10 @@ nav h3 {
 }
 
 
+
 .exp-sicons {
     width: 1.2em;
-    height: auto;
+    height: 1.2em;
     display: block;
     color: var(--accent-icon-muted);
     transition:
