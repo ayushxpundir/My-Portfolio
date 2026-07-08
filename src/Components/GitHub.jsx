@@ -9,7 +9,7 @@ function GitHub() {
 
     const customGreenTheme = {
         dark: [
-            '#111113',
+            '#0a0a0a00',
             '#004d35',
             '#007d57',
             '#2ee6a8',

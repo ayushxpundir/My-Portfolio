@@ -79,11 +79,11 @@ body::before {
 }
 
 #root {
-    /* background-color: var(--root-bg-color); */
+    background-color: var(--root-bg-color);
     width: 100%;
     max-width: 45em;
     min-height: 100%;
-    padding: 2em;
+    padding: 2.5em;
     /*
   border-left: 1.5px solid var(--root-border);
   border-right: 1.5px solid var(--root-border);

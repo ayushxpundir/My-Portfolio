@@ -742,7 +742,7 @@ nav h3 {
 }
 
 .top-header {
-    margin-bottom: 4em;
+    margin-bottom: 0em;
     width: 100%;
     display: flex;
     align-items: center;
