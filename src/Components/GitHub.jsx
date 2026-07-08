@@ -16,7 +16,7 @@ function GitHub() {
             '#00dd99'
         ],
         light: [
-            '#eff4f1',
+            '#eff4f100',
             '#d8efe4',
             '#9dddbf',
             '#58c996',
