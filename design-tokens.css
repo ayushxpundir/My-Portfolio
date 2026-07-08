@@ -608,6 +608,7 @@ nav h3 {
 
 .exp-sicons {
     width: 1.2em;
+    height: 1.2em;
     height: auto;
     display: block;
     color: var(--accent-icon-muted);
@@ -1051,6 +1052,7 @@ nav h3 {
 
     .exp-sicons {
         width: 1em;
+        height: 1em;
     }
 
     .loader-spinner {
